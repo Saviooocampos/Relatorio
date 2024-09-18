@@ -1,24 +1,411 @@
-\chapter{Atividades desenvolvidas}
+\chapter{ATIVIDADES DESENVOLVIDAS}
 
-Adicione aqui um parágrafo introdutório para que o capítulo não comece ``vazio'' e a leitura não entre diretamente na primeira seção. Você pode começar o parágrafo falando do assunto e dando continuidade nas seções seguintes ou começar com um parágrafo genérico que descreve o que os leitores encontrarão. Exemplo:
-
-\textit{``Esse capítulo apresentará...''}
+Este capítulo apresentará a documentação técnica de um produto na forma de software, inicialmente por meio de uma \textit{API (Application Programming Interface)}, como possível solução da problemática em questão. Na sequência, será abordado sobre a arquitetura do sistema, escopo do projeto, questões de armazenamento de dados e acerca das tecnologias escolhidas para o desenvolvimento da aplicação. Ademais, o projeto possui apenas fins educacionais e exemplificativos até o presente momento.
 
 \section{Escopo do Projeto}
-Defina os limites do projeto, ou seja, o que está incluído no escopo e o que está excluído. Isso ajuda a evitar mal-entendidos futuros.
 
-Liste e explique as funcionalidades e recursos do sistema. Isso pode incluir ações que os usuários podem realizar, como login, busca, envio de informações etc. Apresente aqui o Levantamento de Requisitos contendo os Requisitos Funcionais (RF) e os Não-Funcionais (RNF);
+O projeto em questão tem o objetivo de oferecer uma maneira ágil de buscar ou divulgar caronas, inovando a prática que já ocorre na região, mas de maneira bagunçada e com pouco alcance, permitindo, agora, por meio da aplicação, uma comunicação mais eficiente entre os envolvidos, mais segurança, além de possibilitar valores mais justos para todos os envolvidos. 
 
+Para consolidar tal objetivo, foi desenvolvida uma \textit{API} que permitirá futuras adaptações para um aplicativo mobile. Essa \textit{API} será responsável por gerenciar o cadastro e autenticação dos usuários, possibilitando aos cadastrados a solicitação e divulgação de caronas na região. Além disso, ela incluirá a possibilidade de avaliar os usuários por meio do histórico de viagens, garantindo a segurança dos envolvidos.
+
+Futuramente poderá ser projetado novas funcionalidades, como integrações com serviços de pagamento e soluções de validação de documentos. O projeto será desenvolvido com foco em escalabilidade, segurança de dados e alta disponibilidade, garantindo uma experiência fluida e segura tanto para motoristas quanto para passageiros.
+
+
+%Defina os limites do projeto, ou seja, o que está incluído no escopo e o que está excluído. Isso ajuda a evitar mal-entendidos futuros.
+
+%Liste e explique as funcionalidades e recursos do sistema. Isso pode incluir ações que os usuários podem realizar, como login, busca, envio de informações etc. Apresente aqui o Levantamento de Requisitos contendo os Requisitos Funcionais (RF) e os Não-Funcionais (RNF);
+
+%banco de dados
 \section{Banco de Dados}
-Explique como os dados são armazenados e gerenciados pelo sistema, incluindo detalhes sobre o banco de dados utilizado, esquema de banco de dados, tabelas e relacionamentos. Apresente aqui o Diagrama Entidade-Relacionamento (DER) e o Modelo Entidade-Relacionamento (MER);
+
+A construção de um banco de dados é de suma importância para fazer testes de requisição na API desenvolvida. Neste contexto, serão introduzidos o Diagrama Entidade-Relacionamento (DER) e o Modelo Entidade-Relacionamento (MER), fundamentais para representar graficamente a organização das entidades e os vínculos entre os dados no sistema. Em seguida, serão descritos o esquema do banco de dados, suas tabelas e os relacionamentos estabelecidos entre elas, proporcionando uma visão clara da estrutura de armazenamento de informações. Essas representações visuais são cruciais para entender a estrutura lógica e física do banco de dados, bem como para facilitar o processo de manutenção e expansão futura do software.
+
+\subsection{Modelo Entidade-Relacionamento (MER)}
+
+A construção deste diagrama conceitual foi de suma importância para a modelagem de dados, representando o mini mundo em questão de um possível aplicativo de caronas. Transformar um recorte do mundo real, para o significado dos dados e como eles se relacionam é crucial na precisão das buscas de informações armazenadas no servidor. A figura do ``Anexo A'' mostra o diagrama entidade-relacionamento deste projeto.
+
+
+\subsection{Diagrama Entidade-Relacionamento (DER)}
+
+Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para realizar a conversão das tabelas necessárias no banco de dados. O DER facilita a compreensão do MER, tornando a estrutura do banco de dados mais intuitiva e visual, detalhando as chaves primárias, estrangeiras e as cardinalidades. A figura do ``Anexo B'' demonstra as tabelas convertidas, suas chaves e cardinalidades.
+
+\subsection{Dicionário de Dados}
+
+% tabela de usuário
+\begin{longtblr}[
+	caption = {\textbf{Banco de Dados - Usuários}},
+	label = {tab:requisitos},
+	entry = none,
+	]{
+		width = \linewidth,
+		colspec = {Q[163]Q[144]Q[631]},
+		row{1} = {c},
+		row{2} = {c},
+		cell{1}{1} = {c=3}{0.938\linewidth},
+		cell{3}{1} = {c},
+		cell{3}{2} = {c},
+		cell{4}{1} = {c},
+		cell{4}{2} = {c},
+		cell{5}{1} = {c},
+		cell{5}{2} = {c},
+		cell{6}{1} = {c},
+		cell{6}{2} = {c},
+		cell{7}{1} = {c},
+		cell{7}{2} = {c},
+		cell{8}{1} = {c},
+		cell{8}{2} = {c},
+		cell{9}{1} = {c},
+		cell{9}{2} = {c},
+		cell{10}{1} = {c},
+		cell{10}{2} = {c},
+		cell{11}{1} = {c},
+		cell{11}{2} = {c},
+		cell{12}{1} = {c},
+		cell{12}{2} = {c},
+		cell{13}{1} = {c},
+		cell{13}{2} = {c},
+		cell{14}{1} = {c},
+		cell{14}{2} = {c},
+		cell{15}{1} = {c},
+		cell{15}{2} = {c},
+		cell{16}{1} = {c},
+		cell{16}{2} = {c},
+		cell{17}{1} = {c},
+		cell{17}{2} = {c},
+		hlines,
+		vlines,
+	}
+	\textbf{Usuários} &  & \\
+	\textbf{Nome} & \textbf{Tipo de dados} & \textbf{Descrição}\\
+	nome & VARCHAR & Nome do usuário.\\
+	senha & VARCHAR~ & {Senha forte, com no mínimo 8 caracteres, incluindo\\letras maiusculas, minúsculas, números e caracteres\\especiais.}\\
+	segundo\_nome & VARCHAR & Sobrenome do usuário.\\
+	email & VARCHAR~ & E-mail único, utilizado para login.\\
+	data\_criacao & DATE & Armazena a data da criação do perfil.\\
+	foto\_perfil & VARCHAR~ & Caminho para a foto de perfil do usuário.\\
+	data\_
+	atualizacao & DATE & Ultima atualização do usuário.\\
+	telefone & VARCHAR & Número de telefone válido.~\\
+	(PK) idUsuario & VARCHAR & Chave primária, identificador único do usuário.\\
+	eh\_motorista & BOOLEAN & Diferencia o usuário do motorista.\\
+	ativo & BOOLEAN & Salva a informação se o usuário é ativo.\\
+	licenca & VARCHAR~ & Número da CNH, salvo quando o motorista é registrado no sistema.\\
+	(PK) idMotorista & VARCHAR~ & Chave primária, identificador único do usuário cadastrado como motorista.\\
+	(FK) fk\_avaliação & VARCHAR~ & Chave estrangeira, referencia a tabela "avaliações".\\
+	(FK) fk\_endereço & VARCHAR & Chave estrangeira, referencia a tabela "endereços".
+\end{longtblr}
+
+% Tabela REALIZA
+
+\begin{longtblr}[
+	caption = {\textbf{Banco de Dados - Realiza}},
+	label = {tab:requisitos},
+	entry = none,
+	]{
+		width = \linewidth,
+		colspec = {Q[156]Q[215]Q[571]},
+		row{1} = {c},
+		row{2} = {c},
+		cell{1}{1} = {c=3}{0.942\linewidth},
+		cell{3}{1} = {c},
+		cell{3}{2} = {c},
+		cell{4}{1} = {c},
+		cell{4}{2} = {c},
+		hlines,
+		vlines,
+	}
+	\textbf{REALIZA} &                        &                                                   \\
+	\textbf{NOME}    & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}                                \\
+	(FK) reserva     & VARCHAR                & Chave estrangeira, referência à tabela “reservas” \\
+	(FK) usuario     & VARCHAR                & Chave estrangeira,referência à tabela “usuarios”  
+\end{longtblr}
+
+
+% Tabela TROCA
+
+\begin{longtblr}[
+	caption = {\textbf{Banco de Dados - Troca}},
+	label = {tab:requisitos},
+	entry = none,
+	]{
+		width = \linewidth,
+		colspec = {Q[121]Q[129]Q[690]},
+		row{1} = {c},
+		row{2} = {c},
+		cell{1}{1} = {c=3}{0.94\linewidth},
+		cell{3}{1} = {c},
+		cell{3}{2} = {c},
+		cell{4}{1} = {c},
+		cell{4}{2} = {c},
+		cell{5}{1} = {c},
+		cell{5}{2} = {c},
+		cell{6}{1} = {c},
+		cell{6}{2} = {c},
+		hlines,
+		vlines,
+	}
+	\textbf{TROCA~} &                        &                                                                                                                  \\
+	\textbf{NOME}   & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}                                                                                               \\
+	(PK) id\_troca~ & VARCHAR                & Chave primária, identificador único da tabela troca. Identifica as trocas de mensagens entre usuário e motorista \\
+	(FK) usuario    & VARCHAR                & Chave estrangeira,referência à tabela “usuarios                                                                  \\
+	(FK) motorista  & VARCHAR                & Chave estrangeira,referência à tabela “motoristas”                                                               \\
+	(FK) mensagem   & VARCHAR                & Chave estrangeira,referência à tabela “mensagens”~                                                               
+\end{longtblr}
+
+% Tabela Mensagens
+
+\begin{longtblr}[
+	caption = {\textbf{Banco de Dados - Mensagens}},
+	label = {tab:requisitos},
+	entry = none,
+	]{
+		width = \linewidth,
+		colspec = {Q[169]Q[210]Q[562]},
+		row{1} = {c},
+		row{2} = {c},
+		cell{1}{1} = {c=3}{0.941\linewidth},
+		cell{3}{1} = {c},
+		cell{3}{2} = {c},
+		cell{4}{1} = {c},
+		cell{4}{2} = {c},
+		cell{5}{1} = {c},
+		cell{5}{2} = {c},
+		hlines,
+		vlines,
+	}
+	\textbf{MENSAGENS}    &                        &                                                 \\
+	\textbf{NOME}         & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}                              \\
+	{(PK) \\id\_mensagem} & VARCHAR                & Chave primária, identificador único da mensagem \\
+	conteudo              & TEXT                   & armazena o conteúdo das mensagens trocadas      \\
+	data\_envio           & dateTime               & data do envio da mensagem~                      
+\end{longtblr}
+
+% Tabela PERTENCE
+
+\begin{longtblr}[
+	caption = {\textbf{Banco de Dados - Pertence}},
+	label = {tab:requisitos},
+	entry = none,
+	]{
+		width = \linewidth,
+		colspec = {Q[138]Q[213]Q[588]},
+		row{1} = {c},
+		row{2} = {c},
+		cell{1}{1} = {c=3}{0.939\linewidth},
+		cell{3}{1} = {c},
+		cell{3}{2} = {c},
+		cell{4}{1} = {c},
+		cell{4}{2} = {c},
+		hlines,
+		vlines,
+	}
+	\textbf{PERTENCE} &                        &                                                  \\
+	\textbf{NOME}     & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}                               \\
+	{(FK)\\mensagem}  & VARCHAR                & Chave estrangeira,referência à tabela “mensagem” \\
+	{(FK)\\~viagem}   & VARCHAR                & Chave estrangeira,referência à tabela “viagens”  
+\end{longtblr}
+
+% Tabela VIAGENS
+
+% \usepackage{tabularray}
+\begin{longtblr}[
+	label = none,
+	entry = none,
+	]{
+		width = \linewidth,
+		colspec = {Q[102]Q[123]Q[715]},
+		row{1} = {c},
+		row{2} = {c},
+		cell{1}{1} = {c=3}{0.94\linewidth},
+		cell{3}{1} = {c},
+		cell{3}{2} = {c},
+		cell{4}{1} = {c},
+		cell{4}{2} = {c},
+		cell{5}{1} = {c},
+		cell{5}{2} = {c},
+		cell{6}{1} = {c},
+		cell{6}{2} = {c},
+		cell{7}{1} = {c},
+		cell{7}{2} = {c},
+		cell{8}{1} = {c},
+		cell{8}{2} = {c},
+		cell{9}{1} = {c},
+		cell{9}{2} = {c},
+		cell{10}{1} = {c},
+		cell{10}{2} = {c},
+		cell{11}{1} = {c},
+		cell{11}{2} = {c},
+		cell{12}{1} = {c},
+		cell{12}{2} = {c},
+		cell{13}{1} = {c},
+		cell{13}{2} = {c},
+		cell{14}{1} = {c},
+		cell{14}{2} = {c},
+		cell{15}{1} = {c},
+		cell{15}{2} = {c},
+		cell{16}{1} = {c},
+		cell{16}{2} = {c},
+		cell{17}{1} = {c},
+		cell{17}{2} = {c},
+		vline{-} = {2-17}{},
+		hline{2-18} = {-}{},
+	}
+	&                        &                                                                                                                      \\
+	\textbf{NOME}            & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}                                                                                                   \\
+	status                   & ENUM                   & Armazena os possíveis status da corrida, variando entre agendado, em andamento,concluído ou cancelado.               \\
+	{data\\\_criacao}        & dateTime               & Data da criação da corrida~                                                                                          \\
+	preco                    & DECIMAL                & Preço da corrida, quando aplicável a monetização da mesma.                                                           \\
+	{hora\\\_termino}        & dateTime               & Registra a hora que a corrida acaba.                                                                                 \\
+	prefe-rencias            & VARCHAR                & Preferências da corrida definidas pelos participantes antes do seu início.                                           \\
+	{data\\\_atuali-zacao}   & dateTime               & Data de atualização mais recente da viagem.                                                                          \\
+	{hora\\\_partida}        & dateTime               & Define a hora de início de uma viagem.                                                                               \\
+	{lugares\\\_disponiveis} & INT                    & Armazena a quantidade de assentos disponíveis para os passageiros de acordo com o veículo cadastrado pelo motorista. \\
+	{(PK)\\~idviagem}        & VARCHAR                & Chave primária, identificador da tabela viagem.                                                                      \\
+	{(FK) \\motorista}       & VARCHAR                & Chave estrangeira, referência à tabela "motoristas".                                                                 \\
+	{(FK)\\~reservas}        & VARCHAR                & Chave estrangeira, referência à tabela "reservas".                                                                   \\
+	{(FK)\\~avaliacao}       & VARCHAR                & Chave estrangeira, referência à tabela "avaliações".                                                                 \\
+	{(FK)\\~endereco}        & VARCHAR                & Chave estrangeira, referência à tabela "endereços".                                                                  \\
+	{(FK) \\veiculo}         & VARCHAR                & Chave estrangeira, referência à tabela "veículos".                                                                   \\
+	{(FK)\\~usuario}         & VARCHAR                & Chave estrangeira, referência à tabela "Usuários".                                                                   
+\end{longtblr}
+
+
+% Tabela RESERVAS
+
+% Tabela AVALIACOES
+
+% Tabela ENDEREÇOS
+
+% Tabela REGISTRA
+
+% Tabela VEÍCULOS
+
+% FIM do Banco de Dados 
+
+% Arquitetura 
 
 \section{Arquitetura do Sistema}
-Descreva a arquitetura geral do sistema. Explique como está a estruturação dos arquivos, como os códigos estão interligados e de que forma as funções estão associadas.
 
-Caso deseje, separe a explicação desse tópico em front-end e back-end.
+Durante a produção de qualquer software é necessário garantir que o sistema seja robusto, eficiente e adaptável às necessidades do usuário. Com essa finalidade existe a arquitetura de sistema, responsável pela estrutura e organização dos componentes de um software, incluindo a maneira como esses elementos interagem entre si e com o ambiente externo. Com a finalidade de seguir os padrões de mercado, definiu-se um conjunto de regras aplicando os saberes adquiridos nas matérias Programação Programação Orientada a Objetos, Programação Web I e Banco de Dados I.
 
-%\subsection{Front-end}
-%\subsection{Back-end}
+\subsection{Organização do Projeto}
+
+Primordialmente, foi fundamental criar uma organização no \textit{ GitHub} para gerenciar futuras atualizações do projeto entre os desenvolvedores, a qual pode ser acessada por meio do link: [https://github.com/projeto-integrador-tads/]. A arquitetura escolhida para o desenvolvimento da \textit{API} foi a de microsserviços, utilizando o estilo \textit{RESTful} para comunicação entre os componentes. 
+
+\subsection{Requisitos Funcionais}
+
+Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos em funcionais e não funcionais, com o objetivo de identificar os recursos mínimos necessários para o funcionamento inicial da aplicação, bem como visualizar,de forma mais clara, possíveis necessidades futuras, visando garantir um melhor desempenho na versão final. Nesse contexto, as funcionalidades foram definidas na tabela 1 como requisitos funcionais do sistema e, na tabela 2, como requisitos não funcionais - responsáveis por descrever as possíveis restrições do sistema.
+
+%Tabela de levantamentos de requisitos Funcionais 
+
+\begin{longtblr}[
+	caption = {\textbf{Tabela de Requisitos Funcionais}},
+	label = {tab:requisitos},
+	entry = {none},
+	]{
+		width = \linewidth,
+		colspec = {Q[75]Q[123]Q[742]},
+		row{1} = {c},
+		cell{1}{1} = {t},
+		cell{2}{1} = {c},
+		cell{2}{2} = {c},
+		cell{3}{1} = {c},
+		cell{3}{2} = {c},
+		cell{4}{1} = {c},
+		cell{4}{2} = {c},
+		cell{5}{1} = {c},
+		cell{5}{2} = {c},
+		hlines,
+		vlines,
+	}
+	\textbf{Refe-rência} & \textbf{Requisito}        & \textbf{Descrição}                                                                                                                                                               \\
+	RF01                 & Criação de conta          & Um novo usuário poderá ser cadastrado informando um nome, e-mail e número de telefone                                                                                            \\
+	RF02                 & Cadastro de motorista     & Cadastrar um veículo é o que possibilitará ao usuário oferecer uma carona.                                                                                                       \\
+	RF03                 & Reserva de carona         & Os usuários podem solicitar ou oferecer uma carona. A segunda possibilidade somente será válida para aqueles com algum veículo devidamente registrado na plataforma.             \\
+	RF04                 & Filtrar caronas na região & Todos os usuários podem ver as caronas oferecidas na região especificada. Cada anúncio terá informações de destino, hora da viagem, lugares disponíveis e, se aplicável, o valor 
+\end{longtblr}
+
+
+% Tabela requisitos não funcionais 
+\begin{longtblr}[
+	caption = {Tabela de Requisitos Não Funcionais},
+	label = {tab:requisitos},
+	entry = none,
+	]{
+		width = \linewidth,
+		colspec = {Q[81]Q[212]Q[648]},
+		row{1} = {c},
+		cell{2}{1} = {c},
+		cell{2}{2} = {c},
+		cell{3}{1} = {c},
+		cell{3}{2} = {c},
+		cell{4}{1} = {c},
+		cell{4}{2} = {c},
+		cell{5}{1} = {c},
+		cell{5}{2} = {c},
+		hlines,
+		vlines,
+	}
+	\textbf{Refe-
+		rência} & \textbf{Requisito}                  & \textbf{Descrição}                                                                                                      \\
+	RNF01             & Verificação de documentos pessoais~ & Validar se os documentos cadastrados na plataforma são válidos.                                                         \\
+	RNF02             & Consulta veicular                   & Consultar se os dados do veículo informados pelo usuário estão cadastrados na base de dados do departamento de trânsito \\
+	RNF03             & Pesquisa de antecedentes criminais  & A funcionalidade poderia aumentar a segurança do usuário.                                                               \\
+	RNF04             & Ranking de confiança                & Os usuários com a melhor pontuação poderiam ter privilégios de divulgação ao oferecer ou solicitar uma carona.          
+\end{longtblr}
+
+%regras de negócio 
+\subsection{Regras de Negocio}
+
+
+
+% FIM Arquitetura 
 
 \section{Tecnologias e Ferramentas}
-Mencione as tecnologias, linguagens de programação, \textit{frameworks}, bibliotecas (\textit{libs}) e demais ferramentas que foram utilizadas no desenvolvimento do sistema. Apresente aqui imagens e/ou logotipos das ferramentas.
+
+O desenvolvimento de software exige uma variedade de recursos durante a produção. Escolher cuidadosamente as ferramentas a serem utilizadas no ambiente de desenvolvimento garante a qualidade, funcionalidade, eficácia, escalabilidade e eficiência do sistema. Nesse contexto, as seguintes tecnologias foram empregadas durante o desenvolvimento: 
+
+\subsection{Ambiente de Trabalho}
+
+\begin{enumerate}
+	\item\textit{ Visual Studio Code} - editor de código-fonte gratuito que permite a integração com \textit{Git}, facilitando \textit{commits, pushes, pulls e merges}, além de possibilitar o uso do \textit{intelliSense} para melhorar a produtividade no ambiente de trabalho.
+	
+	\item \textit{GitHub} -  plataforma de hospedagem de código-fonte que permite o versionamento \textit{ Git}. Foi de suma importância para que cada colaborador trabalhasse na implementação das mudanças nos repositórios da organização.
+	
+	\item \textit{Node.js} -  Ferramenta de execução e interpretação da linguagem \textit{JavaScript} que permite o seu uso no ambiente de desenvolvimento, sendo de suma importância para executar os códigos criados ao lado do servidor com tal linguagem. 
+\end{enumerate}
+
+
+\subsection{Linguagem de Programação}
+
+\begin{enumerate}
+	\item \textit{JavaScript} -   linguagem de programação escolhida devido a sua  versatilidade, facilidade de uso, sintaxe limpa e grande oferta de \textit{frameworks.}
+	\item \textit{TypeScript} - é o superset do \textit{JavaScript} que adiciona tipagem estática à linguagem,  permitindo com que o desenvolvedor possa definir os tipos de dados das suas variáveis, funções e objetos com a finalidade de tornar o código mais seguro, previsível e escalável, além de facilitar futuras refatorações
+
+\end{enumerate}
+
+\subsection{\textit{Framework}}
+\textit{Fastify} - Uma das melhores opções entre os frameworks para \textit{Node.js,} sendo rápido, flexível e com uma excelente experiência de desenvolvimento. Foi fundamental para construir aplicações web escaláveis e de alto desempenho, além de oferecer uma boa integração com o \textit{TypeScript.}
+
+\subsection{Banco de Dados}
+
+\begin{enumerate}
+
+	\item \textit{Prisma - ORM (Object-Relational Mapper)} escolhido para as interações com o banco de dados, sendo fundamental para criar migrações, assim criar, ler, atualizar e deletar dados no banco de dados se tornou mais rápido e com menos código, reduzindo a possibilidade de erros.
+	
+	\item  \textit{MySQL} - SGBD (Sistema Gerenciador de Banco de Dados) responsável por armazenar, organizar e gerenciar dados. É conhecido pela confiabilidade e ampla utilização nos mais variados ambientes de desenvolvimento.
+	
+	\item BrModelo -  foi uma ferramenta importante na modelagem do banco de dados, permitindo a elaboração de diagramas entidade-relacionamento (ER) e facilitando a sua visualização antes da implementação da versão final do banco.
+	
+\end{enumerate}
+
+\subsection{Produtividade}
+
+\begin{enumerate}
+	
+	\item \textit{Trello} - Utilizado para o gerenciamento do projetos baseado em metodologia visual, por meio de um sistema de quadro de Kanban, dividindo uma tarefa em várias ações para que todos os integrantes do grupo participem do projeto de forma coesa.
+	
+	\item \textit{ Notion} -  Necessário para os desenvolvedores centralizarem as informações importantes, bem como anotações desenvolvidas ao longo do trabalho. Entre as suas vantagens destaca-se a facilidade de uso e a integração com outras ferramentas.
+	
+\end{enumerate}
+
