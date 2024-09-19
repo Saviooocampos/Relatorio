@@ -33,7 +33,7 @@ Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para r
 
 % tabela de usuário
 \begin{longtblr}[
-	caption = {\textbf{Banco de Dados - Usuários}},
+	caption = {Banco de Dados - Usuários},
 	label = {tab:requisitos},
 	entry = none,
 	]{
@@ -98,7 +98,7 @@ Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para r
 % Tabela REALIZA
 
 \begin{longtblr}[
-	caption = {\textbf{Banco de Dados - Realiza}},
+	caption = {Banco de Dados - Realiza},
 	label = {tab:requisitos},
 	entry = none,
 	]{
@@ -124,7 +124,7 @@ Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para r
 % Tabela TROCA
 
 \begin{longtblr}[
-	caption = {\textbf{Banco de Dados - Troca}},
+	caption = {Banco de Dados - Troca},
 	label = {tab:requisitos},
 	entry = none,
 	]{
@@ -155,7 +155,7 @@ Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para r
 % Tabela Mensagens
 
 \begin{longtblr}[
-	caption = {\textbf{Banco de Dados - Mensagens}},
+	caption = {Banco de Dados - Mensagens},
 	label = {tab:requisitos},
 	entry = none,
 	]{
@@ -183,7 +183,7 @@ Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para r
 % Tabela PERTENCE
 
 \begin{longtblr}[
-	caption = {\textbf{Banco de Dados - Pertence}},
+	caption = {Banco de Dados - Pertence},
 	label = {tab:requisitos},
 	entry = none,
 	]{
@@ -207,13 +207,15 @@ Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para r
 
 % Tabela VIAGENS
 
+% \usepackage{rotating}
 % \usepackage{tabularray}
 \begin{longtblr}[
-	label = none,
+	caption = {Banco de Dados - Viagens},
+	label = {tab:requisitos},
 	entry = none,
 	]{
 		width = \linewidth,
-		colspec = {Q[102]Q[123]Q[715]},
+		colspec = {Q[98]Q[123]Q[719]},
 		row{1} = {c},
 		row{2} = {c},
 		cell{1}{1} = {c=3}{0.94\linewidth},
@@ -247,38 +249,194 @@ Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para r
 		cell{16}{2} = {c},
 		cell{17}{1} = {c},
 		cell{17}{2} = {c},
-		vline{-} = {2-17}{},
-		hline{2-18} = {-}{},
+		hlines,
+		vlines,
 	}
-	&                        &                                                                                                                      \\
-	\textbf{NOME}            & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}                                                                                                   \\
-	status                   & ENUM                   & Armazena os possíveis status da corrida, variando entre agendado, em andamento,concluído ou cancelado.               \\
-	{data\\\_criacao}        & dateTime               & Data da criação da corrida~                                                                                          \\
-	preco                    & DECIMAL                & Preço da corrida, quando aplicável a monetização da mesma.                                                           \\
-	{hora\\\_termino}        & dateTime               & Registra a hora que a corrida acaba.                                                                                 \\
-	prefe-rencias            & VARCHAR                & Preferências da corrida definidas pelos participantes antes do seu início.                                           \\
-	{data\\\_atuali-zacao}   & dateTime               & Data de atualização mais recente da viagem.                                                                          \\
-	{hora\\\_partida}        & dateTime               & Define a hora de início de uma viagem.                                                                               \\
-	{lugares\\\_disponiveis} & INT                    & Armazena a quantidade de assentos disponíveis para os passageiros de acordo com o veículo cadastrado pelo motorista. \\
-	{(PK)\\~idviagem}        & VARCHAR                & Chave primária, identificador da tabela viagem.                                                                      \\
-	{(FK) \\motorista}       & VARCHAR                & Chave estrangeira, referência à tabela "motoristas".                                                                 \\
-	{(FK)\\~reservas}        & VARCHAR                & Chave estrangeira, referência à tabela "reservas".                                                                   \\
-	{(FK)\\~avaliacao}       & VARCHAR                & Chave estrangeira, referência à tabela "avaliações".                                                                 \\
-	{(FK)\\~endereco}        & VARCHAR                & Chave estrangeira, referência à tabela "endereços".                                                                  \\
-	{(FK) \\veiculo}         & VARCHAR                & Chave estrangeira, referência à tabela "veículos".                                                                   \\
-	{(FK)\\~usuario}         & VARCHAR                & Chave estrangeira, referência à tabela "Usuários".                                                                   
+	\textbf{VIAGENS} &  & \\
+	\textbf{NOME} & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}\\
+	status & ENUM & Armazena os possíveis status da corrida, variando entre agendado, em andamento,concluído ou cancelado.\\
+	{data\\\_criacao} & dateTime & Data da criação da corrida~\\
+	preco & DECIMAL & Preço da corrida, quando aplicável a monetização da mesma.\\
+	{hora\\\_termino} & dateTime & Registra a hora que a corrida acaba.\\
+	{prefe-\\rencias} & VARCHAR & Preferências da corrida definidas pelos participantes antes do seu início.\\
+	{data\\\_atuali-\\zacao} & dateTime & Data de atualização mais recente da viagem.\\
+	{hora\\\_partida} & dateTime & Define a hora de início de uma viagem.\\
+	{lugares\\\_dispo\\niveis} & INT & Armazena a quantidade de assentos disponíveis para os passageiros de acordo com o veículo cadastrado pelo motorista.\\
+	{(PK) \\idviagem} & VARCHAR & Chave primária, identificador da tabela viagem.\\
+	{(FK)\\motorista} & VARCHAR & Chave estrangeira, referência à tabela ``motoristas''.\\
+	{(FK) \\reservas} & VARCHAR & Chave estrangeira, referência à tabela ``reservas''.\\
+	{(FK) \\avaliacao} & VARCHAR & Chave estrangeira, referência à tabela ``avaliações".\\
+	{(FK) \\endereco} & VARCHAR & Chave estrangeira, referência à tabela ``endereços''.\\
+	{(FK) \\veiculo} & VARCHAR & Chave estrangeira, referência à tabela ``veículos''.\\
+	{(FK) \\usuario} & VARCHAR & Chave estrangeira, referência à tabela ``Usuários''.
 \end{longtblr}
 
 
 % Tabela RESERVAS
 
+\begin{longtblr}[
+	caption = {Banco de Dados - Reservas},
+	label = {tab:requisitos},
+	entry = none,
+	]{
+		width = \linewidth,
+		colspec = {Q[88]Q[135]Q[715]},
+		row{1} = {c},
+		row{2} = {c},
+		cell{1}{1} = {c=3}{0.938\linewidth},
+		cell{3}{1} = {c},
+		cell{3}{2} = {c},
+		cell{4}{1} = {c},
+		cell{4}{2} = {c},
+		cell{5}{1} = {c},
+		cell{5}{2} = {c},
+		cell{6}{1} = {c},
+		cell{6}{2} = {c},
+		cell{7}{1} = {c},
+		cell{7}{2} = {c},
+		cell{8}{1} = {c},
+		cell{8}{2} = {c},
+		hlines,
+		vlines,
+	}
+	\textbf{RESERVAS} &  & \\
+	\textbf{NOME} & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}\\
+	{(PK) \\idReserva} & VARCHAR & Chave primária, identificador único da reserva.\\
+	{hora\\\_reserva} & dateTime & Hora de realização da reserva.\\
+	{data\\\_criacao} & DATE & Armazena a data da criação no momento em que a reserva é feita.~\\
+	{data\\\_atuali\\zacao} & DATE & Data da última atualização da reserva.\\
+	status & ENUM & Armazena os possíveis status da reserva, variando entre agendado, em andamento,concluído ou cancelado.\\
+	{status\\\_paga\\mento} & ENUM & Armazena os possíveis status de pagamento quando aplicável.
+\end{longtblr}
+
 % Tabela AVALIACOES
+
+\begin{longtblr}[
+	caption = {Banco de Dados - Avaliações},
+	label = {tab:requisitos},
+	entry = none,
+	]{
+		width = \linewidth,
+		colspec = {Q[150]Q[204]Q[585]},
+		row{1} = {c},
+		row{2} = {c},
+		cell{1}{1} = {c=3}{0.939\linewidth},
+		cell{3}{1} = {c},
+		cell{3}{2} = {c},
+		cell{4}{1} = {c},
+		cell{4}{2} = {c},
+		cell{5}{1} = {c},
+		cell{5}{2} = {c},
+		cell{6}{1} = {c},
+		cell{6}{2} = {c},
+		cell{7}{1} = {c},
+		cell{7}{2} = {c},
+		cell{8}{1} = {c},
+		cell{8}{2} = {c},
+		hlines,
+		vlines,
+	}
+	\textbf{AVALIAÇÕES} &  & \\
+	\textbf{NOME} & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}\\
+	nota & INT & Numeral de 1 a 5 representando a nota da avaliação.\\
+	{data\\\_envio} & dateTime & {Data de envio do registro\textbf{}\\\textbf{}}\\
+	comentario & TEXT & Mensagem de avaliação do usuário.~\\
+	{(PK) \\idAvaliacao} & VARCHAR & Chave primária, identificador único da avaliação.\\
+	{data\\\_criacao} & dateTime & Data de criação do registro.\\
+	{data\\\_atualizacao} & dateTime & Data da modificação mais recente.
+\end{longtblr}
+
 
 % Tabela ENDEREÇOS
 
+
+
+
+
+
+
+
+
+
 % Tabela REGISTRA
 
+
+
+
+
+
+
+
+
+
+
 % Tabela VEÍCULOS
+
+
+\subsection{Relacionamentos}
+
+\begin{enumerate}
+	\item \textbf{Motoristas - Veículos}
+	\begin{itemize}
+		\item (1,N): Cada motorista pode possuir vários veículos.
+		\item (N,1): Um veículo pode ser associado a vários motoristas ao longo do tempo.
+	\end{itemize}
+	
+	\item \textbf{Motoristas - Viagens}
+	\begin{itemize}
+		\item (1,N): Um motorista pode criar várias viagens.
+		\item (1,1): Cada viagem é conduzida por um único motorista.
+	\end{itemize}
+	
+	\item \textbf{Viagens - Reservas}
+	\begin{itemize}
+		\item (1,N): Cada viagem pode ter várias reservas.
+		\item (1,1): Cada reserva está associada a uma única viagem.
+	\end{itemize}
+	
+	\item \textbf{Usuários - Reservas}
+	\begin{itemize}
+		\item (1,N): Um usuário pode fazer várias reservas.
+		\item (N,1): Cada reserva é feita por um único usuário.
+	\end{itemize}
+	
+	\item \textbf{Usuários - Endereços}
+	\begin{itemize}
+		\item (1,N): Um usuário pode ter vários endereços.
+		\item (N,1): Cada endereço pertence a um único usuário.
+	\end{itemize}
+	
+	\item \textbf{Viagens - Avaliações}
+	\begin{itemize}
+		\item (1,N): Cada viagem pode ter várias avaliações.
+		\item (1,1): Cada avaliação é feita para uma única viagem.
+	\end{itemize}
+	
+	\item \textbf{Usuários - Avaliações}
+	\begin{itemize}
+		\item (1,N): Um usuário pode fazer várias avaliações.
+		\item (N,1): Cada avaliação é feita por um único usuário.
+	\end{itemize}
+	
+	\item \textbf{Usuários - Mensagens}
+	\begin{itemize}
+		\item (1,N): Um usuário pode enviar e receber várias mensagens.
+		\item (N,1): Cada mensagem tem um remetente e um destinatário únicos, podendo envolver diferentes usuários.
+	\end{itemize}
+	
+	\item \textbf{Endereço - Viagens}
+	\begin{itemize}
+		\item (1,N): Cada viagem pode ter vários endereços associados.
+		\item (N,1): Cada endereço pode estar associado a várias viagens.
+	\end{itemize}
+	
+	\item \textbf{Mensagens - Viagens}
+	\begin{itemize}
+		\item (1,N): Cada viagem pode ter várias mensagens associadas.
+		\item (N,1): Cada mensagem pode estar associada a várias viagens.
+	\end{itemize}
+\end{enumerate}
+
 
 % FIM do Banco de Dados 
 
@@ -294,12 +452,12 @@ Primordialmente, foi fundamental criar uma organização no \textit{ GitHub} par
 
 \subsection{Requisitos Funcionais}
 
-Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos em funcionais e não funcionais, com o objetivo de identificar os recursos mínimos necessários para o funcionamento inicial da aplicação, bem como visualizar,de forma mais clara, possíveis necessidades futuras, visando garantir um melhor desempenho na versão final. Nesse contexto, as funcionalidades foram definidas na tabela 1 como requisitos funcionais do sistema e, na tabela 2, como requisitos não funcionais - responsáveis por descrever as possíveis restrições do sistema.
+Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos em funcionais e não funcionais, com o objetivo de identificar os recursos mínimos necessários para o funcionamento inicial da aplicação, bem como visualizar,de forma mais clara, possíveis necessidades futuras, visando garantir um melhor desempenho na versão final. Nesse contexto, as funcionalidades foram definidas na tabela 6 como requisitos funcionais do sistema e, na tabela 7, como requisitos não funcionais - responsáveis por descrever as possíveis restrições do sistema até o presente momento, podendo ser implementadas futuramente.
 
 %Tabela de levantamentos de requisitos Funcionais 
 
 \begin{longtblr}[
-	caption = {\textbf{Tabela de Requisitos Funcionais}},
+	caption = {Tabela de Requisitos Funcionais},
 	label = {tab:requisitos},
 	entry = {none},
 	]{
@@ -354,11 +512,85 @@ Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos 
 	RNF04             & Ranking de confiança                & Os usuários com a melhor pontuação poderiam ter privilégios de divulgação ao oferecer ou solicitar uma carona.          
 \end{longtblr}
 
-%regras de negócio 
-\subsection{Regras de Negocio}
+%INICIO Critérios de Aceitação
+\subsection{Critérios de Aceitação}
 
+\begin{enumerate}
+	
+	\item \textbf{Cadastro de Usuários}
+	\begin{itemize}
+		\item Usuários devem se cadastrar com e-mail válido e senha forte.
+		\item O e-mail deve ser único.
+		\item A senha deve ter no mínimo 8 caracteres.
+		\item Usuários devem fornecer informações pessoais básicas.
+		
+	\end{itemize}
+	
+	\item \textbf{Segurança}
+	
+	\begin{itemize}
+		\item Encriptação de senha no banco de dados com um hash.
+		\item As fotos de perfil e documentos ficarão salvos na Amazon S3.
+		\item E-mails de alerta quando dados críticos sofrerem alteração (e-mail, senha).
+		\item Alterar a senha possui uma quantidade máxima de tentativas por token.
+	\end{itemize}
+	
+	\item \textbf{Perfil de Usuário}
+	
+	\begin{itemize}
+		\item Usuários podem atualizar seu perfil a qualquer momento.
+		\item Possibilidade de alterar nome, telefone, foto de perfil, etc.
+		\item Endereço de e-mail e data de nascimento não podem ser alterados sem verificação adicional.
+		\item Usuários devem verificar seu e-mail após o cadastro.
+		\item Envio de um e-mail de confirmação com um link para ativar a conta.
+	\end{itemize}
+	
+	\item \textbf{Cadastro de Veículos}
+	
+	\begin{itemize}
+		\item Motoristas devem cadastrar seus veículos para oferecer caronas.
+		\item Informar marca, modelo, ano, placa, cor e número de assentos disponíveis.
+		\item Motoristas devem enviar documentos comprobatórios relativos ao veículo.
+	\end{itemize}
+	
+	\item \textbf{Publicação de Viagens}
+	
+	\begin{itemize}
+		\item Motoristas podem criar viagens detalhando rota, data, hora e pontos de embarque/desembarque.
+		\item Especificar preço por passageiro, se aplicável.
+		\item Informar restrições ou preferências (ex. não fumantes, animais permitidos, etc.).
+		\item As viagens devem ser criadas com antecedência mínima.
+		\item Definir um tempo mínimo (ex. 1 hora) antes do horário de partida para criação de novas viagens.
+	\end{itemize}
+	
+	\item \textbf{Reserva de Caronas}
+	
+	\begin{itemize}
+		\item Passageiros podem reservar vagas nas viagens disponíveis.
+		\item Confirmar a reserva mediante pagamento, se aplicável.
+		\item Notificação para motorista e passageiro sobre a reserva confirmada.
+		\item Passageiros podem cancelar suas reservas.
+		\item Definir políticas de cancelamento e reembolso (ex. cancelamento até 24 horas antes da viagem para reembolso total).
+	\end{itemize}
+	
+	\item \textbf{Avaliação e Feedback}
+	
+	\begin{itemize}
+		\item Usuários podem avaliar e deixar feedback sobre as viagens.
+		\item Motoristas e passageiros podem se avaliar mutuamente.
+		\item Avaliações devem ser visíveis nos perfis dos usuários.
+	\end{itemize}
+	
+	\item \textbf{Suporte}
+	
+	\begin{itemize}
+		\item Monitoramento e Resolução de Problemas.
+		\item Canal de suporte ao usuário para resolução de problemas e disputas.
+	\end{itemize}
 
+\end{enumerate}
 
+% FIM dos critérios de Aceitação
 % FIM Arquitetura 
 
 \section{Tecnologias e Ferramentas}
