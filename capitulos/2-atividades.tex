@@ -15,7 +15,7 @@ Futuramente poderá ser projetado novas funcionalidades, como integrações com 
 
 %Liste e explique as funcionalidades e recursos do sistema. Isso pode incluir ações que os usuários podem realizar, como login, busca, envio de informações etc. Apresente aqui o Levantamento de Requisitos contendo os Requisitos Funcionais (RF) e os Não-Funcionais (RNF);
 
-%banco de dados
+% INICIO banco de dados
 \section{Banco de Dados}
 
 A construção de um banco de dados é de suma importância para fazer testes de requisição na API desenvolvida. Neste contexto, serão introduzidos o Diagrama Entidade-Relacionamento (DER) e o Modelo Entidade-Relacionamento (MER), fundamentais para representar graficamente a organização das entidades e os vínculos entre os dados no sistema. Em seguida, serão descritos o esquema do banco de dados, suas tabelas e os relacionamentos estabelecidos entre elas, proporcionando uma visão clara da estrutura de armazenamento de informações. Essas representações visuais são cruciais para entender a estrutura lógica e física do banco de dados, bem como para facilitar o processo de manutenção e expansão futura do software.
@@ -31,6 +31,8 @@ Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para r
 
 \subsection{Dicionário de Dados}
 
+O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de desenvolvimento de software, pois descreve detalhadamente as tabelas que compõem o banco de dados relacional, bem como seus atributos. Esta seção tem como objetivo proporcionar uma visão clara e organizada da estrutura do banco de dados, listando as entidades e suas respectivas características. No contexto deste trabalho, as principais tabelas incluem Usuários, Endereços, Motoristas, Veículos, Viagens, Reservas, Mensagens e Avaliações. A seguir, será apresentada a descrição de cada tabela, incluindo suas principais colunas e uma breve explicação dos atributos mais relevantes.
+
 % tabela de usuário
 \begin{longtblr}[
 	caption = {Banco de Dados - Usuários},
@@ -38,7 +40,7 @@ Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para r
 	entry = none,
 	]{
 		width = \linewidth,
-		colspec = {Q[163]Q[144]Q[631]},
+		colspec = {Q[190]Q[160]Q[620]},
 		row{1} = {c},
 		row{2} = {c},
 		cell{1}{1} = {c=3}{0.938\linewidth},
@@ -76,15 +78,14 @@ Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para r
 		vlines,
 	}
 	\textbf{Usuários} &  & \\
-	\textbf{Nome} & \textbf{Tipo de dados} & \textbf{Descrição}\\
+	\textbf{NOME} & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}\\
 	nome & VARCHAR & Nome do usuário.\\
 	senha & VARCHAR~ & {Senha forte, com no mínimo 8 caracteres, incluindo\\letras maiusculas, minúsculas, números e caracteres\\especiais.}\\
 	segundo\_nome & VARCHAR & Sobrenome do usuário.\\
 	email & VARCHAR~ & E-mail único, utilizado para login.\\
 	data\_criacao & DATE & Armazena a data da criação do perfil.\\
 	foto\_perfil & VARCHAR~ & Caminho para a foto de perfil do usuário.\\
-	data\_
-	atualizacao & DATE & Ultima atualização do usuário.\\
+	data\_atualizacao & DATE & Ultima atualização do usuário.\\
 	telefone & VARCHAR & Número de telefone válido.~\\
 	(PK) idUsuario & VARCHAR & Chave primária, identificador único do usuário.\\
 	eh\_motorista & BOOLEAN & Diferencia o usuário do motorista.\\
@@ -215,7 +216,7 @@ Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para r
 	entry = none,
 	]{
 		width = \linewidth,
-		colspec = {Q[98]Q[123]Q[719]},
+		colspec = {Q[230]X[150]X[727]},
 		row{1} = {c},
 		row{2} = {c},
 		cell{1}{1} = {c=3}{0.94\linewidth},
@@ -255,13 +256,13 @@ Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para r
 	\textbf{VIAGENS} &  & \\
 	\textbf{NOME} & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}\\
 	status & ENUM & Armazena os possíveis status da corrida, variando entre agendado, em andamento,concluído ou cancelado.\\
-	{data\\\_criacao} & dateTime & Data da criação da corrida~\\
+	{data\_criacao} & dateTime & Data da criação da corrida~\\
 	preco & DECIMAL & Preço da corrida, quando aplicável a monetização da mesma.\\
-	{hora\\\_termino} & dateTime & Registra a hora que a corrida acaba.\\
-	{prefe-\\rencias} & VARCHAR & Preferências da corrida definidas pelos participantes antes do seu início.\\
-	{data\\\_atuali-\\zacao} & dateTime & Data de atualização mais recente da viagem.\\
-	{hora\\\_partida} & dateTime & Define a hora de início de uma viagem.\\
-	{lugares\\\_dispo\\niveis} & INT & Armazena a quantidade de assentos disponíveis para os passageiros de acordo com o veículo cadastrado pelo motorista.\\
+	{hora\_termino} & dateTime & Registra a hora que a corrida acaba.\\
+	{preferencias} & VARCHAR & Preferências da corrida definidas pelos participantes antes do seu início.\\
+	{data\_atualizacao} & dateTime & Data de atualização mais recente da viagem.\\
+	{hora\_partida} & dateTime & Define a hora de início de uma viagem.\\
+	{lugares\\\_disponiveis} & INT & Armazena a quantidade de assentos disponíveis para os passageiros de acordo com o veículo cadastrado pelo motorista.\\
 	{(PK) \\idviagem} & VARCHAR & Chave primária, identificador da tabela viagem.\\
 	{(FK)\\motorista} & VARCHAR & Chave estrangeira, referência à tabela ``motoristas''.\\
 	{(FK) \\reservas} & VARCHAR & Chave estrangeira, referência à tabela ``reservas''.\\
@@ -280,7 +281,7 @@ Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para r
 	entry = none,
 	]{
 		width = \linewidth,
-		colspec = {Q[88]Q[135]Q[715]},
+		colspec = {Q[210]X[150]X[737]},
 		row{1} = {c},
 		row{2} = {c},
 		cell{1}{1} = {c=3}{0.938\linewidth},
@@ -302,11 +303,11 @@ Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para r
 	\textbf{RESERVAS} &  & \\
 	\textbf{NOME} & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}\\
 	{(PK) \\idReserva} & VARCHAR & Chave primária, identificador único da reserva.\\
-	{hora\\\_reserva} & dateTime & Hora de realização da reserva.\\
-	{data\\\_criacao} & DATE & Armazena a data da criação no momento em que a reserva é feita.~\\
-	{data\\\_atuali\\zacao} & DATE & Data da última atualização da reserva.\\
+	{hora\_reserva} & dateTime & Hora de realização da reserva.\\
+	{data\_criacao} & DATE & Armazena a data da criação no momento em que a reserva é feita.~\\
+	{data\\\_atualizacao} & DATE & Data da última atualização da reserva.\\
 	status & ENUM & Armazena os possíveis status da reserva, variando entre agendado, em andamento,concluído ou cancelado.\\
-	{status\\\_paga\\mento} & ENUM & Armazena os possíveis status de pagamento quando aplicável.
+	{status\\\_pagamento} & ENUM & Armazena os possíveis status de pagamento quando aplicável.
 \end{longtblr}
 
 % Tabela AVALIACOES
@@ -349,29 +350,126 @@ Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para r
 
 % Tabela ENDEREÇOS
 
-
-
-
-
-
-
-
+% \usepackage{rotating}
+% \usepackage{tabularray}
+\begin{longtblr}[
+	caption = {Banco de Dados - Endereços},
+	label = {tab:requisitos},
+	entry = none,
+	]{
+		width = \linewidth,
+		colspec = {Q[220]X[150]X[737]},
+		row{1} = {c},
+		row{2} = {c},
+		cell{1}{1} = {c=3}{0.938\linewidth},
+		cell{3}{1} = {c},
+		cell{3}{2} = {c},
+		cell{4}{1} = {c},
+		cell{4}{2} = {c},
+		cell{5}{1} = {c},
+		cell{5}{2} = {c},
+		cell{6}{1} = {c},
+		cell{6}{2} = {c},
+		cell{7}{1} = {c},
+		cell{7}{2} = {c},
+		cell{8}{1} = {c},
+		cell{8}{2} = {c},
+		cell{9}{1} = {c},
+		cell{9}{2} = {c},
+		hlines,
+		vlines,
+	}
+	\textbf{ENDEREÇOS} &  & \\
+	\textbf{NOME} & \textbf{TIPO DE DADOS} & \textbf{\textbf{DESCRIÇÃO}}\\
+	{(PK)\\idEndereco} & VARCHAR & Chave primária, identificador único do endereço\\
+	cidade & VARCHAR & Nome da cidade\\
+	longitude & REAL & coordenada que especifica a posição geográfica da posição norte-sul de uma cidade específica. É de suma importância nas requisições.\\
+	latitude & REAL & coordenada geográfica que especifica a posição leste–oeste de uma cidade específica. É de suma importância nas requisições.\\
+	{endereco\\\_formatado} & VARCHAR & Nome formatado do endereço. Importante para a precisão das pesquisas, uma vez que algumas localizações possuem nomes populares, não registrados pelos serviços de geolocalização.\\
+	{data\\\_criacao} & dateTime & Data de criação do registro.\\
+	{data\\\_atualizacao} & dateTime & Data da última atualização.
+\end{longtblr}
 
 
 % Tabela REGISTRA
 
-
-
-
-
-
-
-
-
+\begin{longtblr}[
+	caption = {Banco de Dados - Registra},
+	label = {tab:requisitos},
+	entry = none,
+	]{
+		width = \linewidth,
+		colspec = {Q[121]Q[221]Q[598]},
+		row{1} = {c},
+		row{2} = {c},
+		cell{1}{1} = {c=3}{0.94\linewidth},
+		cell{3}{1} = {c},
+		cell{3}{2} = {c},
+		cell{4}{1} = {c},
+		cell{4}{2} = {c},
+		hlines,
+		vlines,
+	}
+	\textbf{REGISTRA} &  & \\
+	\textbf{NOME} & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}\\
+	{(FK)\\veiculo} & VARCHAR & Chave estrangeira, referência à tabela "veículos".\\
+	{(FK) \\motorista} & VARCHAR & Chave estrangeira, referência à tabela "usuários".
+\end{longtblr}
 
 
 % Tabela VEÍCULOS
 
+\begin{longtblr}[
+	caption = {Banco de Dados - Veículos},
+	label = {tab:requisitos},
+	entry = none,
+	]{
+		width = \linewidth,
+		colspec = {Q[210]Q[162]Q[611]},
+		row{1} = {c},
+		row{2} = {c},
+		cell{1}{1} = {c=3}{0.941\linewidth},
+		cell{3}{1} = {c},
+		cell{3}{2} = {c},
+		cell{4}{1} = {c},
+		cell{4}{2} = {c},
+		cell{5}{1} = {c},
+		cell{5}{2} = {c},
+		cell{6}{1} = {c},
+		cell{6}{2} = {c},
+		cell{7}{1} = {c},
+		cell{7}{2} = {c},
+		cell{8}{1} = {c},
+		cell{8}{2} = {c},
+		cell{9}{1} = {c},
+		cell{9}{2} = {c},
+		cell{10}{1} = {c},
+		cell{10}{2} = {c},
+		cell{11}{1} = {c},
+		cell{11}{2} = {c},
+		cell{12}{1} = {c},
+		cell{12}{2} = {c},
+		cell{13}{1} = {c},
+		cell{13}{2} = {c},
+		hlines,
+		vlines,
+	}
+	\textbf{VEÍCULOS} &  & \\
+	\textbf{NOME} & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}\\
+	modelo & VARCHAR & Descreve o modelo do veículo~\\
+	documento & VARCHAR & Salva o número do RENAVAM do veículo\\
+	marca & VARCHAR & Descreve a marca do veículo\\
+	data\_criacao & dateTime & Data de cadastro do veículo.\\
+	capacidade & INT & Quantidade máxima de passageiros que o veículo registrado deve possuir.\\
+	cor & VARCHAR & Cor do veículo\\
+	data\_atualizacao & dateTime & data da última alteração dos dados do veículo.~\\
+	placa & VARCHAR & Salva o número da placa do veículo após o seu registo.\\
+	ano & DATE & Ano de fabricação do veículo\\
+	{(PK) \\idVeiculo} & VARCHAR & Chave primária, identificador único do veículo\\
+	ativo & BOOLEAN & Verifica se o veículo ainda está ativo na aplicação ou não.
+\end{longtblr}
+
+%Fim das tabelas 
 
 \subsection{Relacionamentos}
 
@@ -448,7 +546,17 @@ Durante a produção de qualquer software é necessário garantir que o sistema 
 
 \subsection{Organização do Projeto}
 
-Primordialmente, foi fundamental criar uma organização no \textit{ GitHub} para gerenciar futuras atualizações do projeto entre os desenvolvedores, a qual pode ser acessada por meio do link: [https://github.com/projeto-integrador-tads/]. A arquitetura escolhida para o desenvolvimento da \textit{API} foi a de microsserviços, utilizando o estilo \textit{RESTful} para comunicação entre os componentes. 
+Primordialmente, foi fundamental criar uma organização no \textit{ GitHub} para gerenciar futuras atualizações do projeto entre os desenvolvedores, a qual pode ser acessada por meio do link: [https://github.com/projeto-integrador-tads/]. Definiu-se que a \textit{API}, trabalharia com o estilo \textit{RESTful} para comunicação entre os componentes, além de separar as responsabilidades da aplicação em três partes principais, conhecidas como \textit{Model, View e Controller}. A estrutura de pastas pode ser observada na imagem seguinte:
+
+
+% figura 1
+\begin{figure} [h!]
+	\centering
+	\includegraphics[scale=0.3]{img/pastas.png}
+	\caption{Estrutura de pastas,2024}
+	\label{fig:EstruturaDePastas}
+\end{figure}
+
 
 \subsection{Requisitos Funcionais}
 
@@ -457,14 +565,12 @@ Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos 
 %Tabela de levantamentos de requisitos Funcionais 
 
 \begin{longtblr}[
-	caption = {Tabela de Requisitos Funcionais},
+	caption = {Tabela de Requisitos Funcionais do Sistema},
 	label = {tab:requisitos},
-	entry = {none},
 	]{
 		width = \linewidth,
-		colspec = {Q[75]Q[123]Q[742]},
+		colspec = {Q[140]Q[160]Q[680]},
 		row{1} = {c},
-		cell{1}{1} = {t},
 		cell{2}{1} = {c},
 		cell{2}{2} = {c},
 		cell{3}{1} = {c},
@@ -473,25 +579,33 @@ Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos 
 		cell{4}{2} = {c},
 		cell{5}{1} = {c},
 		cell{5}{2} = {c},
+		cell{6}{1} = {c},
+		cell{6}{2} = {c},
+		cell{7}{1} = {c},
+		cell{7}{2} = {c},
+		cell{8}{1} = {c},
+		cell{8}{2} = {c},
 		hlines,
 		vlines,
 	}
-	\textbf{Refe-rência} & \textbf{Requisito}        & \textbf{Descrição}                                                                                                                                                               \\
-	RF01                 & Criação de conta          & Um novo usuário poderá ser cadastrado informando um nome, e-mail e número de telefone                                                                                            \\
-	RF02                 & Cadastro de motorista     & Cadastrar um veículo é o que possibilitará ao usuário oferecer uma carona.                                                                                                       \\
-	RF03                 & Reserva de carona         & Os usuários podem solicitar ou oferecer uma carona. A segunda possibilidade somente será válida para aqueles com algum veículo devidamente registrado na plataforma.             \\
-	RF04                 & Filtrar caronas na região & Todos os usuários podem ver as caronas oferecidas na região especificada. Cada anúncio terá informações de destino, hora da viagem, lugares disponíveis e, se aplicável, o valor 
+	\textbf{Referência} & \textbf{Requisito} & \textbf{Descrição}\\
+	RF01 & Criação de conta & Um novo usuário poderá ser cadastrado informando um nome, e-mail e número de telefone.\\
+	RF02 & Cadastro de veículo & Cadastrar um veículo é o que possibilitará ao usuário oferecer uma carona.\\
+	RF03 & Reserva de carona & Os usuários podem solicitar ou oferecer uma carona. A segunda possibilidade somente será válida para aqueles com algum veículo devidamente registrado na plataforma.\\
+	RF04 & Mensagens & Os interessados na carona poderão trocar mensagens entre si com o objetivo de facilitar o encontro, definir horários e decidir detalhes da viagem.\\
+	RF05 & Filtrar caronas na região & Todos os usuários podem ver as caronas oferecidas na região especificada. Cada anúncio terá informações de destino, hora da viagem, lugares disponíveis e, se aplicável, o valor.\\
+	RF06 & Avaliações & A avaliação ocorrerá entre motorista e passageiro, sendo uma etapa fundamental para garantir a segurança de todos os usuários. Poderá ser atribuída uma mensagem de caráter opinativo para o público e uma nota que varia de 1 a 5.\\
+	RF07 & Serviços de e-mail & Envio de e-mails específicos de notificação após determinadas ações do usuário. Será possível disparar mensagens de boas vindas, criação de corrida bem sucedida, desativação e reativação de conta, entre outras.
 \end{longtblr}
-
 
 % Tabela requisitos não funcionais 
+% \usepackage{tabularray}
 \begin{longtblr}[
-	caption = {Tabela de Requisitos Não Funcionais},
+	caption = {Requisitos Não Funcionais do Sistema},
 	label = {tab:requisitos},
-	entry = none,
 	]{
 		width = \linewidth,
-		colspec = {Q[81]Q[212]Q[648]},
+		colspec = {Q[140]Q[160]Q[680]},
 		row{1} = {c},
 		cell{2}{1} = {c},
 		cell{2}{2} = {c},
@@ -501,19 +615,29 @@ Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos 
 		cell{4}{2} = {c},
 		cell{5}{1} = {c},
 		cell{5}{2} = {c},
+		cell{6}{1} = {c},
+		cell{6}{2} = {c},
+		cell{7}{1} = {c},
+		cell{7}{2} = {c},
+		cell{8}{1} = {c},
+		cell{8}{2} = {c},
 		hlines,
 		vlines,
 	}
-	\textbf{Refe-
-		rência} & \textbf{Requisito}                  & \textbf{Descrição}                                                                                                      \\
-	RNF01             & Verificação de documentos pessoais~ & Validar se os documentos cadastrados na plataforma são válidos.                                                         \\
-	RNF02             & Consulta veicular                   & Consultar se os dados do veículo informados pelo usuário estão cadastrados na base de dados do departamento de trânsito \\
-	RNF03             & Pesquisa de antecedentes criminais  & A funcionalidade poderia aumentar a segurança do usuário.                                                               \\
-	RNF04             & Ranking de confiança                & Os usuários com a melhor pontuação poderiam ter privilégios de divulgação ao oferecer ou solicitar uma carona.          
+	\textbf{Referência} & \textbf{Requisito} & \textbf{Descrição}\\
+	RNF01 & Verificação de documentos pessoais~ & Validar se os documentos cadastrados na plataforma são válidos.\\
+	RNF02 & Consulta veicular & Consultar se os dados do veículo informados pelo usuário estão cadastrados na base de dados do departamento de trânsito\\
+	RNF03 & Pesquisa de antecedentes criminais & A funcionalidade poderia aumentar a segurança do usuário.\\
+	RNF04 & Ranking de confiança & Os usuários com a melhor pontuação poderiam ter privilégios de divulgação ao oferecer ou solicitar uma carona.\\
+	RNF05 & Pagamentos & Serviços de pagamento com o objetivo de monetizar a aplicação, além da possibilidade de motoristas lucrarem de forma justa.~\\
+	RNF06 & Mensagens automatizadas & O usuário pode utilizar um recurso de inteligência artificial para gerar mensagens rápidas no chat ao solicitar ou oferecer uma carona.\\
+	RNF07 & Canal de Suporte & Canal dedicado para oferecer suporte para possíveis problemas e esclarecer dúvidas frequentes.
 \end{longtblr}
 
-%INICIO Critérios de Aceitação
+% INICIO Critérios de Aceitação
 \subsection{Critérios de Aceitação}
+
+Os Critérios de Aceitação são fundamentais para garantir que o software atenda aos requisitos estabelecidos e ofereça uma experiência segura e funcional aos usuários. Esta seção define as condições e requisitos que devem ser cumpridos para que a versão final do sistema seja considerada aprovada e esteja pronta para uso.
 
 \begin{enumerate}
 	
@@ -529,10 +653,10 @@ Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos 
 	\item \textbf{Segurança}
 	
 	\begin{itemize}
-		\item Encriptação de senha no banco de dados com um hash.
-		\item As fotos de perfil e documentos ficarão salvos na Amazon S3.
+		\item Encriptação de senha no banco de dados com um\textit{ hash}.
+		\item As fotos de perfil e documentos ficarão salvos na \textit{Amazon S3}.
 		\item E-mails de alerta quando dados críticos sofrerem alteração (e-mail, senha).
-		\item Alterar a senha possui uma quantidade máxima de tentativas por token.
+		\item Alterar a senha possui uma quantidade máxima de tentativas por \textit{token}.
 	\end{itemize}
 	
 	\item \textbf{Perfil de Usuário}
@@ -558,9 +682,9 @@ Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos 
 	\begin{itemize}
 		\item Motoristas podem criar viagens detalhando rota, data, hora e pontos de embarque/desembarque.
 		\item Especificar preço por passageiro, se aplicável.
-		\item Informar restrições ou preferências (ex. não fumantes, animais permitidos, etc.).
+		\item Informar restrições ou preferências dos envolvidos na viagem.
 		\item As viagens devem ser criadas com antecedência mínima.
-		\item Definir um tempo mínimo (ex. 1 hora) antes do horário de partida para criação de novas viagens.
+		\item Definir um tempo mínimo antes do horário de partida para criação de novas viagens.
 	\end{itemize}
 	
 	\item \textbf{Reserva de Caronas}
@@ -570,7 +694,7 @@ Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos 
 		\item Confirmar a reserva mediante pagamento, se aplicável.
 		\item Notificação para motorista e passageiro sobre a reserva confirmada.
 		\item Passageiros podem cancelar suas reservas.
-		\item Definir políticas de cancelamento e reembolso (ex. cancelamento até 24 horas antes da viagem para reembolso total).
+		\item Definir, quando aplicável, políticas de cancelamento e reembolso.
 	\end{itemize}
 	
 	\item \textbf{Avaliação e Feedback}
@@ -584,13 +708,14 @@ Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos 
 	\item \textbf{Suporte}
 	
 	\begin{itemize}
-		\item Monitoramento e Resolução de Problemas.
+		\item Monitoramento e resolução de problemas.
 		\item Canal de suporte ao usuário para resolução de problemas e disputas.
 	\end{itemize}
 
 \end{enumerate}
 
 % FIM dos critérios de Aceitação
+
 % FIM Arquitetura 
 
 \section{Tecnologias e Ferramentas}
@@ -636,6 +761,14 @@ O desenvolvimento de software exige uma variedade de recursos durante a produç�
 \begin{enumerate}
 	
 	\item \textit{Trello} - Utilizado para o gerenciamento do projetos baseado em metodologia visual, por meio de um sistema de quadro de Kanban, dividindo uma tarefa em várias ações para que todos os integrantes do grupo participem do projeto de forma coesa.
+	
+	%\begin{figure} [h!]
+		%\centering
+		%\includegraphics[scale=0.4]{img/trello.png}
+		%\caption{Trello da Equipe,2024}
+		%\label{fig:Produtividade}
+	%\end{figure}
+	
 	
 	\item \textit{ Notion} -  Necessário para os desenvolvedores centralizarem as informações importantes, bem como anotações desenvolvidas ao longo do trabalho. Entre as suas vantagens destaca-se a facilidade de uso e a integração com outras ferramentas.
 	
