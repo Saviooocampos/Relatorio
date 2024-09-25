@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.8.21)  21 SEP 2024 16:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.8.21)  25 SEP 2024 18:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -916,6 +916,20 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
+(C:\Users\savio\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(C:\Users\savio\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nom
+etadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+
+(C:\Users\savio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
 (C:\Users\savio\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \c@tracingmulticols=\count388
@@ -1030,8 +1044,8 @@ LaTeX Info: Redefining \newblock on input line 591.
 LaTeX Info: Redefining \cite on input line 618.
 \ABCItoken=\toks35
 )
-Package color Info: Redefining color blue on input line 145.
-Package hyperref Info: Option `colorlinks' set `true' on input line 162.
+Package color Info: Redefining color blue on input line 147.
+Package hyperref Info: Option `colorlinks' set `true' on input line 164.
 \main@idxfile=\write4
 \openout4 = `main.idx'.
 
@@ -1077,27 +1091,27 @@ LaTeX Warning: Label `tab:requisitos' multiply defined.
 ) (capitulos/3-conclusao.aux) (anexos/anexos.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-Package hyperref Info: Link coloring ON on input line 185.
-LaTeX Info: Redefining \degres on input line 185.
-LaTeX Info: Redefining \up on input line 185.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+Package hyperref Info: Link coloring ON on input line 199.
+LaTeX Info: Redefining \degres on input line 199.
+LaTeX Info: Redefining \up on input line 199.
 \myptabbox=\box137
 \myptabboxwidth=\skip271
 
@@ -1126,19 +1140,19 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \microtypecontext on input line 185.
-Package microtype Info: Applying patch `item' on input line 185.
-Package microtype Info: Applying patch `toc' on input line 185.
-Package microtype Info: Applying patch `eqnum' on input line 185.
-Package microtype Info: Applying patch `footnote' on input line 185.
-Package microtype Info: Applying patch `verbatim' on input line 185.
+LaTeX Info: Redefining \microtypecontext on input line 199.
+Package microtype Info: Applying patch `item' on input line 199.
+Package microtype Info: Applying patch `toc' on input line 199.
+Package microtype Info: Applying patch `eqnum' on input line 199.
+Package microtype Info: Applying patch `footnote' on input line 199.
+Package microtype Info: Applying patch `verbatim' on input line 199.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 185.
+LaTeX Info: Redefining \showhyphens on input line 199.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1149,7 +1163,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 )
 \c@lstlisting=\count410
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 2
-02.
+16.
 
 (C:\Users\savio\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1163,41 +1177,41 @@ Package microtype Info: Loading generic protrusion settings for font family
 {C:/Users/savio/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/savi
 o/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}]
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-11.
+25.
 
 (C:\Users\savio\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-11.
+25.
 
 (C:\Users\savio\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-211.
+225.
 
 (C:\Users\savio\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-211.
+225.
 
 (C:\Users\savio\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 211.
+(Font)              <12> on input line 225.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 211.
+(Font)              <8> on input line 225.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 211.
+(Font)              <6> on input line 225.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.211 
+l.225 
        [1
 
 
@@ -1230,18 +1244,18 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Overfull \hbox (5.55878pt too wide) in paragraph at lines 97--97
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 93--93
  []\T1/lmr/m/n/12 (-20) data_atualizacao 
  []
 
 
-Overfull \hbox (5.55878pt too wide) in paragraph at lines 97--97
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 93--93
  []\T1/lmr/m/n/12 (-20) data_atualizacao 
  []
 
 > Step: build the whole table.
 [8]
-Overfull \hbox (5.55878pt too wide) in paragraph at lines 97--97
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 93--93
  []\T1/lmr/m/n/12 (-20) data_atualizacao 
  []
 
@@ -1286,141 +1300,21 @@ Overfull \hbox (5.55878pt too wide) in paragraph at lines 97--97
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (0.59488pt too wide) in paragraph at lines 273--273
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 265--265
  []\T1/lmr/m/n/12 (-20) data_atualizacao 
  []
 
 
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (0.59488pt too wide) in paragraph at lines 273--273
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 265--265
  []\T1/lmr/m/n/12 (-20) data_atualizacao 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
  []
 
 > Step: build the whole table.
 [10]
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (0.59488pt too wide) in paragraph at lines 273--273
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 265--265
  []\T1/lmr/m/n/12 (-20) data_atualizacao 
  []
 
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1428,22 +1322,8 @@ Overfull \hbox (1.1667pt too wide) in paragraph at lines 273--273
 > Step: parse table inner spec.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
-
-Overfull \hbox (0.65114pt too wide) in paragraph at lines 311--311
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (0.65114pt too wide) in paragraph at lines 311--311
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
 > Step: build the whole table.
 [11]
-Overfull \hbox (0.65114pt too wide) in paragraph at lines 311--311
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1452,23 +1332,23 @@ Overfull \hbox (0.65114pt too wide) in paragraph at lines 311--311
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 
  []
 
 > Step: build the whole table.
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 
  []
 
@@ -1480,66 +1360,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 348--348
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 391--391
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 391--391
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Underfull \hbox (badness 4608) in paragraph at lines 391--391
+Underfull \hbox (badness 1478) in paragraph at lines 379--379
 []\T1/lmr/m/n/12 (+20) coordenada ge-o-grá-fica que es-pe-ci-fica a po-si-ção
  []
 
 
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 391--391
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 391--391
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 391--391
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Underfull \hbox (badness 4608) in paragraph at lines 391--391
+Underfull \hbox (badness 1478) in paragraph at lines 379--379
 []\T1/lmr/m/n/12 (+20) coordenada ge-o-grá-fica que es-pe-ci-fica a po-si-ção
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 391--391
- []\T1/lmr/m/n/12 (-20) VARCHAR 
  []
 
 > Step: build the whole table.
 [12]
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 391--391
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 391--391
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
-
-Underfull \hbox (badness 4608) in paragraph at lines 391--391
+Underfull \hbox (badness 1478) in paragraph at lines 379--379
 []\T1/lmr/m/n/12 (+20) coordenada ge-o-grá-fica que es-pe-ci-fica a po-si-ção
  []
 
-
-Overfull \hbox (1.1667pt too wide) in paragraph at lines 391--391
- []\T1/lmr/m/n/12 (-20) VARCHAR 
- []
-
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1555,20 +1390,38 @@ Overfull \hbox (1.1667pt too wide) in paragraph at lines 391--391
 > Step: parse table inner spec.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
+
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 456--456
+ []\T1/lmr/m/n/12 (-20) data_atualizacao 
+ []
+
+
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 456--456
+ []\T1/lmr/m/n/12 (-20) data_atualizacao 
+ []
+
 > Step: build the whole table.
 [13]
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 456--456
+ []\T1/lmr/m/n/12 (-20) data_atualizacao 
+ []
+
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
-79.
- (C:\Users\savio\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+65.
+(C:\Users\savio\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-[14{C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}
-] [15]
-<img/pastas.png, id=180, 550.055pt x 1278.7775pt>
+) [14{C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.en
+c}]
+<img/pastas.png, id=175, 550.055pt x 1278.7775pt>
 File: img/pastas.png Graphic file (type png)
 <use img/pastas.png>
-Package pdftex.def Info: img/pastas.png  used on input line 555.
+Package pdftex.def Info: img/pastas.png  used on input line 542.
 (pdftex.def)             Requested size: 165.01776pt x 383.63622pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15] [16 <./img/pastas.png (PNG copy)>]
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1577,13 +1430,13 @@ Package pdftex.def Info: img/pastas.png  used on input line 555.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Overfull \hbox (1.3957pt too wide) in paragraph at lines 599--599
+Overfull \hbox (1.3957pt too wide) in paragraph at lines 586--586
  []\T1/lmr/bx/n/12 (-20) Referência 
  []
 
 > Step: build the whole table.
-[16 <./img/pastas.png (PNG copy)>]
-Overfull \hbox (1.3957pt too wide) in paragraph at lines 599--599
+
+Overfull \hbox (1.3957pt too wide) in paragraph at lines 586--586
  []\T1/lmr/bx/n/12 (-20) Referência 
  []
 
@@ -1595,19 +1448,19 @@ Overfull \hbox (1.3957pt too wide) in paragraph at lines 599--599
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Overfull \hbox (1.3957pt too wide) in paragraph at lines 635--635
+Overfull \hbox (1.3957pt too wide) in paragraph at lines 623--623
  []\T1/lmr/bx/n/12 (-20) Referência 
  []
 
 > Step: build the whole table.
 
-Overfull \hbox (1.3957pt too wide) in paragraph at lines 635--635
+Overfull \hbox (1.3957pt too wide) in paragraph at lines 623--623
  []\T1/lmr/bx/n/12 (-20) Referência 
  []
 
 [17] [18] [19]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 744.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 732.
  [20]) [21]
 \openout2 = `capitulos/3-conclusao.aux'.
 
@@ -1622,13 +1475,7 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
 
 bibitemlist
 
-Overfull \hbox (45.36066pt too wide) in paragraph at lines 62--62
-\T1/lmr/m/n/12 (-20) comunidades-[]do-[]vale-[]do-[]jequitinhonha-[]denunciam-[
-]violacoes-[]de-[]direitos-[]com-[]a-[]mineracao-[]de-[]litio>[]$[][]. 
- []
-
-
-Overfull \hbox (186.07553pt too wide) in paragraph at lines 69--69
+Overfull \hbox (186.07553pt too wide) in paragraph at lines 75--75
 \T1/lmr/m/n/12 (-20) com-[]reajuste-[]de-[]8-[]nas-[]passagens-[]intermunicipai
 s-[]em-[]minas-[]alternativa-[]pode-[]ser-[]onibus-[]por-[]aplicativo-[]ou-[]ca
 ronas-[]combinadas / 
@@ -1642,23 +1489,30 @@ ronas-[]combinadas /
 \openout2 = `anexos/anexos.aux'.
 
  (anexos/anexos.tex
-<img/AnexoA.png, id=266, 2898.83pt x 2009.5075pt>
-File: img/AnexoA.png Graphic file (type png)
-<use img/AnexoA.png>
-Package pdftex.def Info: img/AnexoA.png  used on input line 8.
-(pdftex.def)             Requested size: 564.2025pt x 391.10115pt.
- [24
+<img/ModeloConceitual.png, id=271, 4015.0pt x 2601.72pt>
+File: img/ModeloConceitual.png Graphic file (type png)
+<use img/ModeloConceitual.png>
+Package pdftex.def Info: img/ModeloConceitual.png  used on input line 13.
+(pdftex.def)             Requested size: 659.74861pt x 427.51852pt.
 
 
- <./img/AnexoA.png>]
-<img/AnexoB.png, id=275, 3159.805pt x 2525.435pt>
-File: img/AnexoB.png Graphic file (type png)
-<use img/AnexoB.png>
-Package pdftex.def Info: img/AnexoB.png  used on input line 21.
-(pdftex.def)             Requested size: 564.2025pt x 450.9364pt.
-) [25
+LaTeX Warning: Float too large for page by 26.43515pt on input line 16.
 
- <./img/AnexoB.png>]
+[24
+
+
+
+] [25 <./img/ModeloConceitual.png>]
+<img/ModeloLogico.jpg, id=282, 4015.0pt x 2176.13pt>
+File: img/ModeloLogico.jpg Graphic file (type jpg)
+<use img/ModeloLogico.jpg>
+Package pdftex.def Info: img/ModeloLogico.jpg  used on input line 30.
+(pdftex.def)             Requested size: 568.75pt x 308.24226pt.
+ [26
+
+
+
+ <./img/ModeloLogico.jpg>])
 No file main.ind.
 \tf@toc=\write6
 \openout6 = `main.toc'.
@@ -1674,16 +1528,16 @@ L3 programming layer <2020/03/25>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: 7A49EC198A8EC41DC126F453DA06A323;486.
+(rerunfilecheck)             Checksum: A20A242DC7FD8E41EE0010ABA79273E2;535.
  ) 
 Here is how much of TeX's memory you used:
- 23293 strings out of 474486
- 407784 string characters out of 5743755
- 1978542 words of memory out of 5000000
- 44965 multiletter control sequences out of 15000+600000
- 645064 words of font info for 193 fonts, out of 8000000 for 9000
+ 23381 strings out of 474486
+ 410300 string characters out of 5743755
+ 1977542 words of memory out of 5000000
+ 45037 multiletter control sequences out of 15000+600000
+ 645354 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,115p,1003b,1193s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,115p,1065b,1193s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
 b><C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb
 ><C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb>
@@ -1694,9 +1548,9 @@ b><C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb
 <C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pf
 b><C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.p
 fb>
-Output written on main.pdf (26 pages, 2055501 bytes).
+Output written on main.pdf (27 pages, 2105909 bytes).
 PDF statistics:
- 432 PDF objects out of 1000 (max. 8388607)
- 109 named destinations out of 1000 (max. 500000)
+ 439 PDF objects out of 1000 (max. 8388607)
+ 111 named destinations out of 1000 (max. 500000)
  43240 words of extra memory for PDF output out of 51595 (max. 10000000)
 

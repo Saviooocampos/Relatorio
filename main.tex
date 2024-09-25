@@ -61,9 +61,11 @@
 \usepackage{microtype} 			% para melhorias de justificação
 \usepackage{array}
 \usepackage{longtable}
+
 \usepackage{tabularray}
 \usepackage{rotating}
 \usepackage{listings}
+\usepackage{pdflscape} % mudar a orientação da página 
 % ---
 
 % ---
@@ -179,6 +181,18 @@
 \makeindex
 % ---
 
+
+% ----------------------------------
+% Definindo o template para o rodapé de continuação de tabela
+\DefTblrTemplate{contfoot-text}{normal}{\centering \textit{Continuação da tabela \thetable\ na próxima página}}
+\SetTblrTemplate{contfoot-text}{normal}
+
+% Definindo o template para o cabeçalho de continuação de tabela
+\DefTblrTemplate{conthead-text}{normal}{}
+\SetTblrTemplate{conthead-text}{normal}
+%--
+%------------------------------------------------------------------
+
 % ----
 % Início do documento
 % ----
@@ -276,5 +290,9 @@
 
 \printindex
 
+%----
+% Define tabela 
+
+%----
 
 \end{document}

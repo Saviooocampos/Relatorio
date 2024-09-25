@@ -39,4 +39,4 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{DIAGRAMA ENTIDADE-RELACIONAMENTO (DER)}}{25}{appendix.anexochapback.2}%
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{DIAGRAMA ENTIDADE-RELACIONAMENTO (DER)}}{26}{appendix.anexochapback.2}%

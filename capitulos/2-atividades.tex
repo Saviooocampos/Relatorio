@@ -1,6 +1,6 @@
 \chapter{ATIVIDADES DESENVOLVIDAS}
 
-Este capítulo apresentará a documentação técnica de um produto na forma de software, inicialmente por meio de uma \textit{API (Application Programming Interface)}, como possível solução da problemática em questão. Na sequência, será abordado sobre a arquitetura do sistema, escopo do projeto, questões de armazenamento de dados e acerca das tecnologias escolhidas para o desenvolvimento da aplicação. Ademais, o projeto possui apenas fins educacionais e exemplificativos até o presente momento.
+Este capítulo apresentará a documentação técnica de um produto na forma de software, inicialmente por meio de uma \textit{Application Programming Interface (API)}, como possível solução da problemática em questão. Na sequência, será abordado sobre a arquitetura do sistema, escopo do projeto, questões de armazenamento de dados e acerca das tecnologias escolhidas para o desenvolvimento da aplicação. Ademais, o projeto possui apenas fins educacionais e exemplificativos até o presente momento.
 
 \section{Escopo do Projeto}
 
@@ -11,31 +11,27 @@ Para consolidar tal objetivo, foi desenvolvida uma \textit{API} que permitirá f
 Futuramente poderá ser projetado novas funcionalidades, como integrações com serviços de pagamento e soluções de validação de documentos. O projeto será desenvolvido com foco em escalabilidade, segurança de dados e alta disponibilidade, garantindo uma experiência fluida e segura tanto para motoristas quanto para passageiros.
 
 
-%Defina os limites do projeto, ou seja, o que está incluído no escopo e o que está excluído. Isso ajuda a evitar mal-entendidos futuros.
-
-%Liste e explique as funcionalidades e recursos do sistema. Isso pode incluir ações que os usuários podem realizar, como login, busca, envio de informações etc. Apresente aqui o Levantamento de Requisitos contendo os Requisitos Funcionais (RF) e os Não-Funcionais (RNF);
-
 % INICIO banco de dados
 \section{Banco de Dados}
 
-A construção de um banco de dados é de suma importância para fazer testes de requisição na API desenvolvida. Neste contexto, serão introduzidos o Diagrama Entidade-Relacionamento (DER) e o Modelo Entidade-Relacionamento (MER), fundamentais para representar graficamente a organização das entidades e os vínculos entre os dados no sistema. Em seguida, serão descritos o esquema do banco de dados, suas tabelas e os relacionamentos estabelecidos entre elas, proporcionando uma visão clara da estrutura de armazenamento de informações. Essas representações visuais são cruciais para entender a estrutura lógica e física do banco de dados, bem como para facilitar o processo de manutenção e expansão futura do software.
+A construção de um banco de dados é de suma importância para fazer testes de requisição na \textit{API} desenvolvida. Neste contexto, serão introduzidos o Diagrama Entidade-Relacionamento (DER) e o Modelo Entidade-Relacionamento (MER), fundamentais para representar graficamente a organização das entidades e os vínculos entre os dados no sistema. Em seguida, serão descritos o esquema do banco de dados, suas tabelas e os relacionamentos estabelecidos entre elas. Essas representações visuais são cruciais para entender a estrutura lógica e física do banco de dados, bem como para facilitar o processo de manutenção e expansão futura do software.
 
 \subsection{Modelo Entidade-Relacionamento (MER)}
 
-A construção deste diagrama conceitual foi de suma importância para a modelagem de dados, representando o mini mundo em questão de um possível aplicativo de caronas. Transformar um recorte do mundo real, para o significado dos dados e como eles se relacionam é crucial na precisão das buscas de informações armazenadas no servidor. A figura do ``Anexo A'' mostra o diagrama entidade-relacionamento deste projeto.
+A construção deste diagrama conceitual foi de suma importância para a modelagem de dados, representando o mini mundo em questão de um possível aplicativo de caronas. Transformar um recorte do mundo real, para o significado dos dados e como eles se relacionam é crucial na precisão das buscas de informações armazenadas no servidor. A figura do \textit{``Anexo A''} mostra o diagrama entidade-relacionamento deste projeto.
 
 
 \subsection{Diagrama Entidade-Relacionamento (DER)}
 
-Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para realizar a conversão das tabelas necessárias no banco de dados. O DER facilita a compreensão do MER, tornando a estrutura do banco de dados mais intuitiva e visual, detalhando as chaves primárias, estrangeiras e as cardinalidades. A figura do ``Anexo B'' demonstra as tabelas convertidas, suas chaves e cardinalidades.
+Após a modelagem do diagrama anterior, foi possível utilizar o BrModelo para realizar a conversão das tabelas necessárias no banco de dados. O DER facilita a compreensão do MER, tornando a estrutura do banco de dados mais intuitiva e visual, detalhando as chaves primárias, estrangeiras e as cardinalidades. A figura do \textit{``Anexo B''} demonstra as tabelas convertidas, suas chaves e cardinalidades.
 
 \subsection{Dicionário de Dados}
 
-O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de desenvolvimento de software, pois descreve detalhadamente as tabelas que compõem o banco de dados relacional, bem como seus atributos. Esta seção tem como objetivo proporcionar uma visão clara e organizada da estrutura do banco de dados, listando as entidades e suas respectivas características. No contexto deste trabalho, as principais tabelas incluem Usuários, Endereços, Motoristas, Veículos, Viagens, Reservas, Mensagens e Avaliações. A seguir, será apresentada a descrição de cada tabela, incluindo suas principais colunas e uma breve explicação dos atributos mais relevantes.
+O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de desenvolvimento de software, pois descreve detalhadamente as tabelas que compõem o banco de dados relacional, bem como seus atributos. Esta seção tem como objetivo proporcionar uma visão clara e organizada da estrutura do banco de dados, listando as entidades e suas respectivas características. No contexto deste trabalho, as principais tabelas incluem Usuários, Endereços, Motoristas, Veículos, Viagens, Reservas, Mensagens e Avaliações. A seguir, será apresentada a descrição de cada tabela de autoria própria.. incluindo suas principais colunas e uma breve explicação dos atributos mais relevantes.
 
 % tabela de usuário
 \begin{longtblr}[
-	caption = {Banco de Dados - Usuários},
+	caption = {Descrição da Entidade Usuários. },
 	label = {tab:requisitos},
 	entry = none,
 	]{
@@ -96,15 +92,15 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 	(FK) fk\_endereço & VARCHAR & Chave estrangeira, referencia a tabela "endereços".
 \end{longtblr}
 
-% Tabela REALIZA
 
+% Tabela REALIZA --
 \begin{longtblr}[
-	caption = {Banco de Dados - Realiza},
+	caption = {Descrição da Entidade Realiza.},
 	label = {tab:requisitos},
 	entry = none,
 	]{
 		width = \linewidth,
-		colspec = {Q[156]Q[215]Q[571]},
+		colspec = {Q[190]Q[160]Q[620]},
 		row{1} = {c},
 		row{2} = {c},
 		cell{1}{1} = {c=3}{0.942\linewidth},
@@ -118,19 +114,18 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 	\textbf{REALIZA} &                        &                                                   \\
 	\textbf{NOME}    & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}                                \\
 	(FK) reserva     & VARCHAR                & Chave estrangeira, referência à tabela “reservas” \\
-	(FK) usuario     & VARCHAR                & Chave estrangeira,referência à tabela “usuarios”  
+	(FK) usuario     & VARCHAR                & Chave estrangeira, referência à tabela “usuarios”  
 \end{longtblr}
 
 
 % Tabela TROCA
-
 \begin{longtblr}[
-	caption = {Banco de Dados - Troca},
+	caption = {Descrição da Entidade Troca.},
 	label = {tab:requisitos},
 	entry = none,
 	]{
 		width = \linewidth,
-		colspec = {Q[121]Q[129]Q[690]},
+		colspec = {Q[190]Q[160]Q[620]},
 		row{1} = {c},
 		row{2} = {c},
 		cell{1}{1} = {c=3}{0.94\linewidth},
@@ -148,20 +143,20 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 	\textbf{TROCA~} &                        &                                                                                                                  \\
 	\textbf{NOME}   & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}                                                                                               \\
 	(PK) id\_troca~ & VARCHAR                & Chave primária, identificador único da tabela troca. Identifica as trocas de mensagens entre usuário e motorista \\
-	(FK) usuario    & VARCHAR                & Chave estrangeira,referência à tabela “usuarios                                                                  \\
-	(FK) motorista  & VARCHAR                & Chave estrangeira,referência à tabela “motoristas”                                                               \\
-	(FK) mensagem   & VARCHAR                & Chave estrangeira,referência à tabela “mensagens”~                                                               
+	(FK) usuario    & VARCHAR                & Chave estrangeira, referência à tabela “usuarios                                                                  \\
+	(FK) motorista  & VARCHAR                & Chave estrangeira, referência à tabela “motoristas”                                                               \\
+	(FK) mensagem   & VARCHAR                & Chave estrangeira, referência à tabela “mensagens”~                                                               
 \end{longtblr}
 
-% Tabela Mensagens
 
+% Tabela Mensagens
 \begin{longtblr}[
-	caption = {Banco de Dados - Mensagens},
+	caption = {Descrição da Entidade Mensagens.},
 	label = {tab:requisitos},
 	entry = none,
 	]{
 		width = \linewidth,
-		colspec = {Q[169]Q[210]Q[562]},
+		colspec = {Q[190]Q[160]Q[620]},
 		row{1} = {c},
 		row{2} = {c},
 		cell{1}{1} = {c=3}{0.941\linewidth},
@@ -181,15 +176,15 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 	data\_envio           & dateTime               & data do envio da mensagem~                      
 \end{longtblr}
 
-% Tabela PERTENCE
 
+% Tabela PERTENCE
 \begin{longtblr}[
-	caption = {Banco de Dados - Pertence},
+	caption = {Descrição da Entidade Pertence.},
 	label = {tab:requisitos},
 	entry = none,
 	]{
 		width = \linewidth,
-		colspec = {Q[138]Q[213]Q[588]},
+		colspec = {Q[190]Q[160]Q[620]},
 		row{1} = {c},
 		row{2} = {c},
 		cell{1}{1} = {c=3}{0.939\linewidth},
@@ -207,16 +202,13 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 \end{longtblr}
 
 % Tabela VIAGENS
-
-% \usepackage{rotating}
-% \usepackage{tabularray}
 \begin{longtblr}[
-	caption = {Banco de Dados - Viagens},
+	caption = {Descrição da Entidade Viagens.},
 	label = {tab:requisitos},
 	entry = none,
 	]{
 		width = \linewidth,
-		colspec = {Q[230]X[150]X[727]},
+		colspec = {Q[190]Q[160]Q[620]},
 		row{1} = {c},
 		row{2} = {c},
 		cell{1}{1} = {c=3}{0.94\linewidth},
@@ -273,15 +265,15 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 \end{longtblr}
 
 
-% Tabela RESERVAS
 
+% Tabela RESERVAS
 \begin{longtblr}[
-	caption = {Banco de Dados - Reservas},
+	caption = {Descrição da Entidade Reservas.},
 	label = {tab:requisitos},
 	entry = none,
 	]{
 		width = \linewidth,
-		colspec = {Q[210]X[150]X[737]},
+		colspec = {Q[190]Q[160]Q[620]},
 		row{1} = {c},
 		row{2} = {c},
 		cell{1}{1} = {c=3}{0.938\linewidth},
@@ -311,14 +303,13 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 \end{longtblr}
 
 % Tabela AVALIACOES
-
 \begin{longtblr}[
-	caption = {Banco de Dados - Avaliações},
+	caption = {Descrição da Entidade Avaliações.},
 	label = {tab:requisitos},
 	entry = none,
 	]{
 		width = \linewidth,
-		colspec = {Q[150]Q[204]Q[585]},
+		colspec = {Q[190]Q[160]Q[620]},
 		row{1} = {c},
 		row{2} = {c},
 		cell{1}{1} = {c=3}{0.939\linewidth},
@@ -349,16 +340,13 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 
 
 % Tabela ENDEREÇOS
-
-% \usepackage{rotating}
-% \usepackage{tabularray}
 \begin{longtblr}[
-	caption = {Banco de Dados - Endereços},
+	caption = {Descrição da Entidade Endereços.},
 	label = {tab:requisitos},
 	entry = none,
 	]{
 		width = \linewidth,
-		colspec = {Q[220]X[150]X[737]},
+		colspec = {Q[190]Q[160]Q[620]},
 		row{1} = {c},
 		row{2} = {c},
 		cell{1}{1} = {c=3}{0.938\linewidth},
@@ -392,14 +380,13 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 
 
 % Tabela REGISTRA
-
 \begin{longtblr}[
-	caption = {Banco de Dados - Registra},
+	caption = {Descrição da Entidade Registra.},
 	label = {tab:requisitos},
 	entry = none,
 	]{
 		width = \linewidth,
-		colspec = {Q[121]Q[221]Q[598]},
+		colspec = {Q[190]Q[160]Q[620]},
 		row{1} = {c},
 		row{2} = {c},
 		cell{1}{1} = {c=3}{0.94\linewidth},
@@ -418,14 +405,13 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 
 
 % Tabela VEÍCULOS
-
 \begin{longtblr}[
-	caption = {Banco de Dados - Veículos},
+	caption = {Descrição da Entidade Veículos.},
 	label = {tab:requisitos},
 	entry = none,
 	]{
 		width = \linewidth,
-		colspec = {Q[210]Q[162]Q[611]},
+		colspec = {Q[190]Q[160]Q[620]},
 		row{1} = {c},
 		row{2} = {c},
 		cell{1}{1} = {c=3}{0.941\linewidth},
@@ -552,8 +538,9 @@ Primordialmente, foi fundamental criar uma organização no \textit{ GitHub} par
 % figura 1
 \begin{figure} [h!]
 	\centering
+	\caption{Estrutura de Pastas do Projeto.}
 	\includegraphics[scale=0.3]{img/pastas.png}
-	\caption{Estrutura de pastas,2024}
+	\legend{Fonte: Autoria Própria}
 	\label{fig:EstruturaDePastas}
 \end{figure}
 
@@ -563,9 +550,9 @@ Primordialmente, foi fundamental criar uma organização no \textit{ GitHub} par
 Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos em funcionais e não funcionais, com o objetivo de identificar os recursos mínimos necessários para o funcionamento inicial da aplicação, bem como visualizar,de forma mais clara, possíveis necessidades futuras, visando garantir um melhor desempenho na versão final. Nesse contexto, as funcionalidades foram definidas na tabela 6 como requisitos funcionais do sistema e, na tabela 7, como requisitos não funcionais - responsáveis por descrever as possíveis restrições do sistema até o presente momento, podendo ser implementadas futuramente.
 
 %Tabela de levantamentos de requisitos Funcionais 
-
-\begin{longtblr}[
-	caption = {Tabela de Requisitos Funcionais do Sistema},
+\newpage
+\begin{longtblr}[,
+	caption = {Tabela de Requisitos Funcionais do Sistema.},
 	label = {tab:requisitos},
 	]{
 		width = \linewidth,
@@ -600,8 +587,8 @@ Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos 
 
 % Tabela requisitos não funcionais 
 % \usepackage{tabularray}
-\begin{longtblr}[
-	caption = {Requisitos Não Funcionais do Sistema},
+\begin{longtblr}[,
+	caption = {Requisitos Não Funcionais do Sistema.},
 	label = {tab:requisitos},
 	]{
 		width = \linewidth,
@@ -632,6 +619,7 @@ Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos 
 	RNF05 & Pagamentos & Serviços de pagamento com o objetivo de monetizar a aplicação, além da possibilidade de motoristas lucrarem de forma justa.~\\
 	RNF06 & Mensagens automatizadas & O usuário pode utilizar um recurso de inteligência artificial para gerar mensagens rápidas no chat ao solicitar ou oferecer uma carona.\\
 	RNF07 & Canal de Suporte & Canal dedicado para oferecer suporte para possíveis problemas e esclarecer dúvidas frequentes.
+
 \end{longtblr}
 
 % INICIO Critérios de Aceitação
