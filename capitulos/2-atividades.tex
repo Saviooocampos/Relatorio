@@ -83,11 +83,10 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 	foto\_perfil & VARCHAR~ & Caminho para a foto de perfil do usuário.\\
 	data\_atualizacao & DATE & Ultima atualização do usuário.\\
 	telefone & VARCHAR & Número de telefone válido.~\\
-	(PK) idUsuario & VARCHAR & Chave primária, identificador único do usuário.\\
+	(PK) idusuario & VARCHAR & Chave primária, identificador único do usuário.\\
 	eh\_motorista & BOOLEAN & Diferencia o usuário do motorista.\\
 	ativo & BOOLEAN & Salva a informação se o usuário é ativo.\\
 	licenca & VARCHAR~ & Número da CNH, salvo quando o motorista é registrado no sistema.\\
-	(PK) idMotorista & VARCHAR~ & Chave primária, identificador único do usuário cadastrado como motorista.\\
 	(FK) fk\_avaliação & VARCHAR~ & Chave estrangeira, referencia a tabela "avaliações".\\
 	(FK) fk\_endereço & VARCHAR & Chave estrangeira, referencia a tabela "endereços".
 \end{longtblr}
@@ -294,7 +293,7 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 	}
 	\textbf{RESERVAS} &  & \\
 	\textbf{NOME} & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}\\
-	{(PK) \\idReserva} & VARCHAR & Chave primária, identificador único da reserva.\\
+	{(PK) \\idreserva} & VARCHAR & Chave primária, identificador único da reserva.\\
 	{hora\_reserva} & dateTime & Hora de realização da reserva.\\
 	{data\_criacao} & DATE & Armazena a data da criação no momento em que a reserva é feita.~\\
 	{data\\\_atualizacao} & DATE & Data da última atualização da reserva.\\
@@ -374,6 +373,7 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 	longitude & REAL & coordenada que especifica a posição geográfica da posição norte-sul de uma cidade específica. É de suma importância nas requisições.\\
 	latitude & REAL & coordenada geográfica que especifica a posição leste–oeste de uma cidade específica. É de suma importância nas requisições.\\
 	{endereco\\\_formatado} & VARCHAR & Nome formatado do endereço. Importante para a precisão das pesquisas, uma vez que algumas localizações possuem nomes populares, não registrados pelos serviços de geolocalização.\\
+	ativo & BOOLEAN & Salva a informação se o endereço é ativo.\\
 	{data\\\_criacao} & dateTime & Data de criação do registro.\\
 	{data\\\_atualizacao} & dateTime & Data da última atualização.
 \end{longtblr}
@@ -443,7 +443,6 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 	\textbf{VEÍCULOS} &  & \\
 	\textbf{NOME} & \textbf{TIPO DE DADOS} & \textbf{DESCRIÇÃO}\\
 	modelo & VARCHAR & Descreve o modelo do veículo~\\
-	documento & VARCHAR & Salva o número do RENAVAM do veículo\\
 	marca & VARCHAR & Descreve a marca do veículo\\
 	data\_criacao & dateTime & Data de cadastro do veículo.\\
 	capacidade & INT & Quantidade máxima de passageiros que o veículo registrado deve possuir.\\
@@ -463,61 +462,67 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 	\item \textbf{Motoristas - Veículos}
 	\begin{itemize}
 		\item (1,N): Cada motorista pode possuir vários veículos.
-		\item (N,1): Um veículo pode ser associado a vários motoristas ao longo do tempo.
+		\item (1,N): Um veículo pode ser associado a vários motoristas ao longo do tempo.
 	\end{itemize}
 	
 	\item \textbf{Motoristas - Viagens}
 	\begin{itemize}
 		\item (1,N): Um motorista pode criar várias viagens.
-		\item (1,1): Cada viagem é conduzida por um único motorista.
+		\item (0,1): Cada viagem é conduzida por um único motorista.
 	\end{itemize}
 	
 	\item \textbf{Viagens - Reservas}
 	\begin{itemize}
 		\item (1,N): Cada viagem pode ter várias reservas.
-		\item (1,1): Cada reserva está associada a uma única viagem.
+		\item (0,1): Cada reserva está associada a uma única viagem.
 	\end{itemize}
 	
 	\item \textbf{Usuários - Reservas}
 	\begin{itemize}
 		\item (1,N): Um usuário pode fazer várias reservas.
-		\item (N,1): Cada reserva é feita por um único usuário.
+		\item (0,1): Cada reserva é feita por um único usuário.
 	\end{itemize}
 	
 	\item \textbf{Usuários - Endereços}
 	\begin{itemize}
 		\item (1,N): Um usuário pode ter vários endereços.
-		\item (N,1): Cada endereço pertence a um único usuário.
+		\item (0,1): Cada endereço pertence a um único usuário.
 	\end{itemize}
 	
 	\item \textbf{Viagens - Avaliações}
 	\begin{itemize}
 		\item (1,N): Cada viagem pode ter várias avaliações.
-		\item (1,1): Cada avaliação é feita para uma única viagem.
+		\item (0,1): Cada avaliação é feita para uma única viagem.
 	\end{itemize}
 	
 	\item \textbf{Usuários - Avaliações}
 	\begin{itemize}
 		\item (1,N): Um usuário pode fazer várias avaliações.
-		\item (N,1): Cada avaliação é feita por um único usuário.
+		\item (0,1): Cada avaliação é feita por um único usuário.
 	\end{itemize}
 	
 	\item \textbf{Usuários - Mensagens}
 	\begin{itemize}
 		\item (1,N): Um usuário pode enviar e receber várias mensagens.
-		\item (N,1): Cada mensagem tem um remetente e um destinatário únicos, podendo envolver diferentes usuários.
+		\item (0,1): Cada mensagem tem um remetente e um destinatário únicos, podendo envolver diferentes usuários.
 	\end{itemize}
 	
 	\item \textbf{Endereço - Viagens}
 	\begin{itemize}
-		\item (1,N): Cada viagem pode ter vários endereços associados.
-		\item (N,1): Cada endereço pode estar associado a várias viagens.
+		\item (1,1): Cada viagem tem um endereço associado.
+		\item (0,N): Cada endereço pode estar associado a várias viagens.
 	\end{itemize}
 	
 	\item \textbf{Mensagens - Viagens}
 	\begin{itemize}
-		\item (1,N): Cada viagem pode ter várias mensagens associadas.
-		\item (N,1): Cada mensagem pode estar associada a várias viagens.
+		\item (0,N): Cada viagem pode ter várias mensagens associadas.
+		\item (0,1): Cada mensagem pode estar associada a várias viagens.
+	\end{itemize}
+	
+	\item \textbf{Veículo - Viagens}
+	\begin{itemize}
+		\item (1,N): Cada veículo pode ser utilizado em várias viagens.
+		\item (0,1): Cada viagem utiliza um único veículo.
 	\end{itemize}
 \end{enumerate}
 
@@ -528,11 +533,11 @@ O Dicionário de Dados é uma seção essencial em projetos acadêmicos e de des
 
 \section{Arquitetura do Sistema}
 
-Durante a produção de qualquer software é necessário garantir que o sistema seja robusto, eficiente e adaptável às necessidades do usuário. Com essa finalidade existe a arquitetura de sistema, responsável pela estrutura e organização dos componentes de um software, incluindo a maneira como esses elementos interagem entre si e com o ambiente externo. Com a finalidade de seguir os padrões de mercado, definiu-se um conjunto de regras aplicando os saberes adquiridos nas matérias Programação Programação Orientada a Objetos, Programação Web I e Banco de Dados I.
+Durante a produção de qualquer software é necessário garantir que o sistema seja robusto, eficiente e adaptável às necessidades do usuário. Com essa finalidade existe a arquitetura de sistema, responsável pela estrutura e organização dos componentes de um software, incluindo a maneira como esses elementos interagem entre si e com o ambiente externo. Com a finalidade de seguir os padrões de mercado, definiu-se um conjunto de regras aplicando os saberes adquiridos nas matérias de Programação Programação Orientada a Objetos, Programação Web I e Banco de Dados I.
 
 \subsection{Organização do Projeto}
 
-Primordialmente, foi fundamental criar uma organização no \textit{ GitHub} para gerenciar futuras atualizações do projeto entre os desenvolvedores, a qual pode ser acessada por meio do link: [https://github.com/projeto-integrador-tads/]. Definiu-se que a \textit{API}, trabalharia com o estilo \textit{RESTful} para comunicação entre os componentes, além de separar as responsabilidades da aplicação em três partes principais, conhecidas como \textit{Model, View e Controller}. A estrutura de pastas pode ser observada na imagem seguinte:
+Primordialmente, foi fundamental criar uma organização no \textit{ GitHub} para gerenciar futuras atualizações do projeto entre os desenvolvedores, a qual pode ser acessada por meio do link: [https://github.com/projeto-integrador-tads/]. Definiu-se que a \textit{API}, trabalharia com o estilo \textit{REST} para comunicação entre os componentes, além de separar as responsabilidades da aplicação em três partes principais, conhecidas como \textit{Model, View e Controller}. A estrutura de pastas pode ser observada na imagem seguinte:
 
 
 % figura 1
@@ -547,7 +552,7 @@ Primordialmente, foi fundamental criar uma organização no \textit{ GitHub} par
 
 \subsection{Requisitos Funcionais}
 
-Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos em funcionais e não funcionais, com o objetivo de identificar os recursos mínimos necessários para o funcionamento inicial da aplicação, bem como visualizar,de forma mais clara, possíveis necessidades futuras, visando garantir um melhor desempenho na versão final. Nesse contexto, as funcionalidades foram definidas na tabela 6 como requisitos funcionais do sistema e, na tabela 7, como requisitos não funcionais - responsáveis por descrever as possíveis restrições do sistema até o presente momento, podendo ser implementadas futuramente.
+Na sequência, foi realizado o levantamento dos requisitos técnicos, divididos em funcionais e não funcionais, com o objetivo de identificar os recursos mínimos necessários para o funcionamento inicial da aplicação, bem como visualizar,de forma mais clara, possíveis necessidades futuras, visando garantir um melhor desempenho na versão final. Nesse contexto, as funcionalidades foram definidas na ``tabela 12'' como requisitos funcionais do sistema e, na ``tabela 13'', como requisitos não funcionais - responsáveis por descrever as possíveis restrições do sistema até o presente momento, podendo ser implementadas futuramente.
 
 %Tabela de levantamentos de requisitos Funcionais 
 \newpage
@@ -704,6 +709,8 @@ Os Critérios de Aceitação são fundamentais para garantir que o software aten
 
 % FIM dos critérios de Aceitação
 
+% ------------------------------
+
 % FIM Arquitetura 
 
 \section{Tecnologias e Ferramentas}
@@ -736,9 +743,9 @@ O desenvolvimento de software exige uma variedade de recursos durante a produç�
 
 \begin{enumerate}
 
-	\item \textit{Prisma - ORM (Object-Relational Mapper)} escolhido para as interações com o banco de dados, sendo fundamental para criar migrações, assim criar, ler, atualizar e deletar dados no banco de dados se tornou mais rápido e com menos código, reduzindo a possibilidade de erros.
+	\item \textit{Prisma - Object-Relational Mapper (ORM)} escolhido para as interações com o banco de dados, sendo fundamental para criar migrações, assim criar, ler, atualizar e deletar dados no banco de dados se tornou mais rápido e com menos código, reduzindo a possibilidade de erros.
 	
-	\item  \textit{MySQL} - SGBD (Sistema Gerenciador de Banco de Dados) responsável por armazenar, organizar e gerenciar dados. É conhecido pela confiabilidade e ampla utilização nos mais variados ambientes de desenvolvimento.
+	\item \textit{MySQL} - Sistema Gerenciador de Banco de Dados (SGBD) responsável por armazenar, organizar e gerenciar dados. É conhecido pela confiabilidade e ampla utilização nos mais variados ambientes de desenvolvimento.
 	
 	\item BrModelo -  foi uma ferramenta importante na modelagem do banco de dados, permitindo a elaboração de diagramas entidade-relacionamento (ER) e facilitando a sua visualização antes da implementação da versão final do banco.
 	
@@ -748,15 +755,7 @@ O desenvolvimento de software exige uma variedade de recursos durante a produç�
 
 \begin{enumerate}
 	
-	\item \textit{Trello} - Utilizado para o gerenciamento do projetos baseado em metodologia visual, por meio de um sistema de quadro de Kanban, dividindo uma tarefa em várias ações para que todos os integrantes do grupo participem do projeto de forma coesa.
-	
-	%\begin{figure} [h!]
-		%\centering
-		%\includegraphics[scale=0.4]{img/trello.png}
-		%\caption{Trello da Equipe,2024}
-		%\label{fig:Produtividade}
-	%\end{figure}
-	
+	\item \textit{Trello} - Utilizado para o gerenciamento do projetos baseado em metodologia visual, por meio de um sistema de quadro de \textit{Kanban}, dividindo uma tarefa em várias ações para que todos os integrantes do grupo participem do projeto de forma coesa.
 	
 	\item \textit{ Notion} -  Necessário para os desenvolvedores centralizarem as informações importantes, bem como anotações desenvolvidas ao longo do trabalho. Entre as suas vantagens destaca-se a facilidade de uso e a integração com outras ferramentas.
 	

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.8.21)  25 SEP 2024 18:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.8.21)  25 SEP 2024 21:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1244,21 +1244,29 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Overfull \hbox (5.55878pt too wide) in paragraph at lines 93--93
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 92--92
  []\T1/lmr/m/n/12 (-20) data_atualizacao 
  []
 
 
-Overfull \hbox (5.55878pt too wide) in paragraph at lines 93--93
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 92--92
  []\T1/lmr/m/n/12 (-20) data_atualizacao 
  []
 
 > Step: build the whole table.
 [8]
-Overfull \hbox (5.55878pt too wide) in paragraph at lines 93--93
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 92--92
  []\T1/lmr/m/n/12 (-20) data_atualizacao 
  []
 
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1291,30 +1299,23 @@ Overfull \hbox (5.55878pt too wide) in paragraph at lines 93--93
 > Step: parse table inner spec.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
-> Step: build the whole table.
-> Step: init table outer spec.
-> Step: parse table options.
-> Step: split table.
-> Step: init table inner spec.
-> Step: parse table inner spec.
-> Step: execute table commands.
-> Step: calculate cell and line sizes.
 
-Overfull \hbox (5.55878pt too wide) in paragraph at lines 265--265
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 264--264
  []\T1/lmr/m/n/12 (-20) data_atualizacao 
  []
 
 
-Overfull \hbox (5.55878pt too wide) in paragraph at lines 265--265
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 264--264
  []\T1/lmr/m/n/12 (-20) data_atualizacao 
  []
 
 > Step: build the whole table.
+
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 264--264
+ []\T1/lmr/m/n/12 (-20) data_atualizacao 
+ []
+
 [10]
-Overfull \hbox (5.55878pt too wide) in paragraph at lines 265--265
- []\T1/lmr/m/n/12 (-20) data_atualizacao 
- []
-
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1323,7 +1324,7 @@ Overfull \hbox (5.55878pt too wide) in paragraph at lines 265--265
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
-[11]
+ [11]
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1332,23 +1333,23 @@ Overfull \hbox (5.55878pt too wide) in paragraph at lines 265--265
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--339
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--339
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--339
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
 
  []
 
 > Step: build the whole table.
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--339
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
 
  []
 
@@ -1370,11 +1371,12 @@ Underfull \hbox (badness 1478) in paragraph at lines 379--379
  []
 
 > Step: build the whole table.
+
+Underfull \hbox (badness 1478) in paragraph at lines 379--379
+[]\T1/lmr/m/n/12 (+20) coordenada ge-o-grá-fica que es-pe-ci-fica a po-si-ção
+ []
+
 [12]
-Underfull \hbox (badness 1478) in paragraph at lines 379--379
-[]\T1/lmr/m/n/12 (+20) coordenada ge-o-grá-fica que es-pe-ci-fica a po-si-ção
- []
-
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1391,31 +1393,33 @@ Underfull \hbox (badness 1478) in paragraph at lines 379--379
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Overfull \hbox (5.55878pt too wide) in paragraph at lines 456--456
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 455--455
  []\T1/lmr/m/n/12 (-20) data_atualizacao 
  []
 
 
-Overfull \hbox (5.55878pt too wide) in paragraph at lines 456--456
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 455--455
  []\T1/lmr/m/n/12 (-20) data_atualizacao 
  []
 
 > Step: build the whole table.
+
+Overfull \hbox (5.55878pt too wide) in paragraph at lines 455--455
+ []\T1/lmr/m/n/12 (-20) data_atualizacao 
+ []
+
 [13]
-Overfull \hbox (5.55878pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/12 (-20) data_atualizacao 
- []
-
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
-65.
-(C:\Users\savio\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+64.
+ (C:\Users\savio\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [14{C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.en
-c}]
-<img/pastas.png, id=175, 550.055pt x 1278.7775pt>
+)
+[14{C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}
+]
+<img/pastas.png, id=176, 550.055pt x 1278.7775pt>
 File: img/pastas.png Graphic file (type png)
 <use img/pastas.png>
-Package pdftex.def Info: img/pastas.png  used on input line 542.
+Package pdftex.def Info: img/pastas.png  used on input line 547.
 (pdftex.def)             Requested size: 165.01776pt x 383.63622pt.
 
 
@@ -1430,13 +1434,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Overfull \hbox (1.3957pt too wide) in paragraph at lines 586--586
+Overfull \hbox (1.3957pt too wide) in paragraph at lines 591--591
  []\T1/lmr/bx/n/12 (-20) Referência 
  []
 
 > Step: build the whole table.
 
-Overfull \hbox (1.3957pt too wide) in paragraph at lines 586--586
+Overfull \hbox (1.3957pt too wide) in paragraph at lines 591--591
  []\T1/lmr/bx/n/12 (-20) Referência 
  []
 
@@ -1448,19 +1452,19 @@ Overfull \hbox (1.3957pt too wide) in paragraph at lines 586--586
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Overfull \hbox (1.3957pt too wide) in paragraph at lines 623--623
+Overfull \hbox (1.3957pt too wide) in paragraph at lines 628--628
  []\T1/lmr/bx/n/12 (-20) Referência 
  []
 
 > Step: build the whole table.
 
-Overfull \hbox (1.3957pt too wide) in paragraph at lines 623--623
+Overfull \hbox (1.3957pt too wide) in paragraph at lines 628--628
  []\T1/lmr/bx/n/12 (-20) Referência 
  []
 
 [17] [18] [19]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 732.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 739.
  [20]) [21]
 \openout2 = `capitulos/3-conclusao.aux'.
 
@@ -1474,13 +1478,6 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
 \openout5 = `main.brf'.
 
 bibitemlist
-
-Overfull \hbox (186.07553pt too wide) in paragraph at lines 75--75
-\T1/lmr/m/n/12 (-20) com-[]reajuste-[]de-[]8-[]nas-[]passagens-[]intermunicipai
-s-[]em-[]minas-[]alternativa-[]pode-[]ser-[]onibus-[]por-[]aplicativo-[]ou-[]ca
-ronas-[]combinadas / 
- []
-
 ) [23
 
 
@@ -1489,30 +1486,36 @@ ronas-[]combinadas /
 \openout2 = `anexos/anexos.aux'.
 
  (anexos/anexos.tex
-<img/ModeloConceitual.png, id=271, 4015.0pt x 2601.72pt>
-File: img/ModeloConceitual.png Graphic file (type png)
-<use img/ModeloConceitual.png>
-Package pdftex.def Info: img/ModeloConceitual.png  used on input line 13.
-(pdftex.def)             Requested size: 659.74861pt x 427.51852pt.
+<img/ModeloConceitualIntegradoredit.png, id=270, 2874.74pt x 1913.1475pt>
+File: img/ModeloConceitualIntegradoredit.png Graphic file (type png)
+<use img/ModeloConceitualIntegradoredit.png>
+Package pdftex.def Info: img/ModeloConceitualIntegradoredit.png  used on input 
+line 13.
+(pdftex.def)             Requested size: 659.74861pt x 439.05133pt.
 
 
-LaTeX Warning: Float too large for page by 26.43515pt on input line 16.
+LaTeX Warning: Float too large for page by 37.96796pt on input line 16.
 
 [24
 
 
 
-] [25 <./img/ModeloConceitual.png>]
-<img/ModeloLogico.jpg, id=282, 4015.0pt x 2176.13pt>
-File: img/ModeloLogico.jpg Graphic file (type jpg)
-<use img/ModeloLogico.jpg>
-Package pdftex.def Info: img/ModeloLogico.jpg  used on input line 30.
-(pdftex.def)             Requested size: 568.75pt x 308.24226pt.
- [26
+] [25 <./img/ModeloConceitualIntegradoredit.png>]
+<img/ModeloLogicoIntegradoredit.png, id=283, 3569.335pt x 2360.82pt>
+File: img/ModeloLogicoIntegradoredit.png Graphic file (type png)
+<use img/ModeloLogicoIntegradoredit.png>
+Package pdftex.def Info: img/ModeloLogicoIntegradoredit.png  used on input line
+ 30.
+(pdftex.def)             Requested size: 659.74861pt x 436.34862pt.
+
+
+LaTeX Warning: Float too large for page by 35.26524pt on input line 33.
+
+[26
 
 
 
- <./img/ModeloLogico.jpg>])
+] [27 <./img/ModeloLogicoIntegradoredit.png>])
 No file main.ind.
 \tf@toc=\write6
 \openout6 = `main.toc'.
@@ -1528,16 +1531,16 @@ L3 programming layer <2020/03/25>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: A20A242DC7FD8E41EE0010ABA79273E2;535.
+(rerunfilecheck)             Checksum: 13DE6A7DE08890012993379B84DE39AC;534.
  ) 
 Here is how much of TeX's memory you used:
- 23381 strings out of 474486
- 410300 string characters out of 5743755
- 1977542 words of memory out of 5000000
+ 23385 strings out of 474486
+ 410528 string characters out of 5743755
+ 1982542 words of memory out of 5000000
  45037 multiletter control sequences out of 15000+600000
- 645354 words of font info for 195 fonts, out of 8000000 for 9000
+ 645470 words of font info for 196 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,115p,1065b,1193s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,115p,1065b,1189s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
 b><C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb
 ><C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb>
@@ -1548,9 +1551,9 @@ b><C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb
 <C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pf
 b><C:/Users/savio/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.p
 fb>
-Output written on main.pdf (27 pages, 2105909 bytes).
+Output written on main.pdf (28 pages, 2080811 bytes).
 PDF statistics:
- 439 PDF objects out of 1000 (max. 8388607)
- 111 named destinations out of 1000 (max. 500000)
+ 445 PDF objects out of 1000 (max. 8388607)
+ 113 named destinations out of 1000 (max. 500000)
  43240 words of extra memory for PDF output out of 51595 (max. 10000000)
 
